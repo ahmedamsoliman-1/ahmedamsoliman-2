@@ -35,10 +35,10 @@
 [![Ahmed's GitHub stats](https://github-readme-stats.vercel.app/api?username=ahmedamsoliman-1&show_icons=true&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
 
 
-[website]: https://codeSTACKr.com
+[website]: https://ahmedamsoliman.com
 [course]: http://vsCodeHero.com
 [twitter]: https://twitter.com/ahmedamsoliman
-[youtube]: https://youtube.com/codeSTACKr
+[youtube]: https://youtube.com/ahmedamsoliman
 [instagram]: https://www.instagram.com/ahmed_ali_m_soliman/?hl=en
 [linkedin]: https://linkedin.com/in/ahmed-ali-m-soliman-01aa54120
 [webdevplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAJ0WbEsFA9W3I1W-g_BTsbt
