@@ -1,20 +1,6 @@
-
-.thumbnail img
+.container
 {
-    width: 100%;
-}
-
-.thumbnail
-{
-    padding: 0;
-}
-
-.thumbnail .caption-full
-{
-    padding: 9px;
-}
-
-#delete-form
-{
-    display: inline;
+    text-align: center;
+    padding-top: 30vh;
+    
 }
