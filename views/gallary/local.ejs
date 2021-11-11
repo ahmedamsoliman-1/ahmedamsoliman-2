@@ -4,10 +4,10 @@
 <div class="container">
     <header class="jumbotron">
         <div class="container">
-            <h1>Weclome To My Galary!</h1>
+            <h1>Weclome To My gallary!</h1>
             <a>View my best Instagram pics</a>
             <p>
-                <a class="btn btn-primary btn-large" href="/galary/local/new"> Add New Picture</a>
+                <a class="btn btn-primary btn-large" href="/gallary/local/new"> Add New Picture</a>
             </p>
         </div>
     </header>
@@ -20,6 +20,9 @@
                     <div class="caption">
                         <h4> <%= _pict.name %> </h4>
                     </div>
+                    <p>
+                        <a href="/gallary/local/<%= _pict._id %>" class="btn btn-primary">Expand</a>
+                    </p>
                 </div>
             </div>
         <% }); %>

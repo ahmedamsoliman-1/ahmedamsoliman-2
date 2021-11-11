@@ -10,7 +10,7 @@ var     express = require("express"),
 
 
         indexRoutes = require("./routes/index"),
-        galaryRoutes = require("./routes/galary"),
+        gallaryRoutes = require("./routes/gallary"),
         linksRoutes = require("./routes/links"),
         gamesRoutes = require("./routes/games");
 
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({extended: true}));app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
 
 app.use(indexRoutes);
-app.use(galaryRoutes);
+app.use(gallaryRoutes);
 app.use(linksRoutes);
 app.use(gamesRoutes);
 // app.use(anni);

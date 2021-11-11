@@ -4,10 +4,10 @@ var router = express.Router();
 
 // var pict = 
 // [
-//     {name: "Ahmed Ali M. Soliman", image: "/image/galary/IMG_20210613_000958_573.jpg"},
-//     {name: "Ahmed Ali M. Soliman", image: "/image/galary/IMG_20210613_000958_647.jpg"},
-//     {name: "Ahmed Ali M. Soliman", image: "/image/galary/IMG_20210613_000958_740.jpg"},
-//     {name: "Ahmed Ali M. Soliman", image: "/image/galary/IMG_20210613_000958_773.jpg"}
+//     {name: "Ahmed Ali M. Soliman", image: "/image/gallary/IMG_20210613_000958_573.jpg"},
+//     {name: "Ahmed Ali M. Soliman", image: "/image/gallary/IMG_20210613_000958_647.jpg"},
+//     {name: "Ahmed Ali M. Soliman", image: "/image/gallary/IMG_20210613_000958_740.jpg"},
+//     {name: "Ahmed Ali M. Soliman", image: "/image/gallary/IMG_20210613_000958_773.jpg"}
 // ]
 
 // Scema setup
@@ -24,7 +24,7 @@ var Picture = mongoose.model("Picture", pictureSchema);
 // Picture.create(
 //     {
 //         name: "Ahmed Ali Mohammed Soliman",
-//         image: "/image/galary/IMG_20210613_000958_647.jpg"
+//         image: "/image/gallary/IMG_20210613_000958_647.jpg"
 //     }, function(err, picture)
 //     {
 //         if(err)
@@ -39,12 +39,12 @@ var Picture = mongoose.model("Picture", pictureSchema);
 //     }
 // );
 
-router.get("/galary", function(req, res) 
+router.get("/gallary", function(req, res) 
 {
-    res.render("galary/galary")
+    res.render("gallary/gallary")
 });
 
-router.get("/galary/local", function(req, res) 
+router.get("/gallary/local", function(req, res) 
 {
     Picture.find({}, function(err, allPic)
     {
@@ -54,17 +54,17 @@ router.get("/galary/local", function(req, res)
         }
         else
         {
-            res.render("galary/local", {pict: allPic});
+            res.render("gallary/local", {pict: allPic});
         }
     });
 });
 
-router.get("/galary/local/new", function(req, res)
+router.get("/gallary/local/new", function(req, res)
 {
-    res.render("galary/new");
+    res.render("gallary/new");
 });
 
-router.post("/galary/local", function(req, res)
+router.post("/gallary/local", function(req, res)
 {
     //get data from form
     var name = req.body.name;
@@ -81,7 +81,24 @@ router.post("/galary/local", function(req, res)
         }
         else
         {
-            res.redirect("/galary/local");
+            res.redirect("/gallary/local");
+        }
+    });
+});
+
+//Display picture - show
+router.get("/gallary/local/:id", function(req, res)
+{
+    // Find the picture with provieded ID
+    Picture.findById(req.params.id, function(err, foundedPic)
+    {
+        if (err)
+        {
+            console.log(err);
+        }
+        else
+        {
+            res.render("gallary/show", {_pict: foundedPic});
         }
     });
 });
