@@ -1,0 +1,24 @@
+<%- include ('partials/header') %>
+
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Weclome To My Galary!</h1>
+            <a>View my best Instagram pics</a>
+        </div>
+    </header>
+
+    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+        <% pict.forEach(function(_pict) { %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= _pict.image %>">
+                    <div class="caption">
+                        <h4> <%= _pict.name %> </h4>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
