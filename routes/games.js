@@ -3,12 +3,12 @@ var router = express.Router();
 
 router.get("/games", function(req, res) 
 {
-    res.render("games");
+    res.render("games/games");
 });
 
 router.get("/games/rgp", function(req, res) 
 {
-    res.render("rgp");
+    res.render("games/rgp");
 });
 
 module.exports = router;

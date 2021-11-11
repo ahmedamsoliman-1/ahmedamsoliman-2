@@ -1,11 +1,12 @@
-// var mongoose = require("mongoose");
+var mongoose = require("mongoose");
 
-// // Scema setup
-// var pictureSchema = new mongoose.Schema(
-//     {
-//         name: String,
-//         image: String
-//     }
-// );
+// Scema setup
+var pictureSchema = new mongoose.Schema(
+    {
+        name: String,
+        image: String,
+        description: String
+    }
+);
 
-// module.exports = mongoose.model("Picture", pictureSchema);
+module.exports = mongoose.model("Picture", pictureSchema);

@@ -3,8 +3,8 @@ var     express = require("express"),
         bodyParser = require("body-parser"),
         app = express(),
 
-        Picture = require("./models/picture"),
-        Comment = require("./models/comment"),
+        // Picture = require("./models/picture"),
+        // Comment = require("./models/comment"),
 
         port = process.env.PORT || 3000,
 

@@ -2,42 +2,7 @@ var express = require("express");
 var mongoose = require("mongoose");
 var router = express.Router();
 
-// var pict = 
-// [
-//     {name: "Ahmed Ali M. Soliman", image: "/image/gallary/IMG_20210613_000958_573.jpg"},
-//     {name: "Ahmed Ali M. Soliman", image: "/image/gallary/IMG_20210613_000958_647.jpg"},
-//     {name: "Ahmed Ali M. Soliman", image: "/image/gallary/IMG_20210613_000958_740.jpg"},
-//     {name: "Ahmed Ali M. Soliman", image: "/image/gallary/IMG_20210613_000958_773.jpg"}
-// ]
-
-// Scema setup
-var pictureSchema = new mongoose.Schema(
-    {
-        name: String,
-        image: String,
-        description: String
-    }
-);
-
-var Picture = mongoose.model("Picture", pictureSchema);
-
-// Picture.create(
-//     {
-//         name: "Ahmed Ali Mohammed Soliman",
-//         image: "/image/gallary/IMG_20210613_000958_647.jpg"
-//     }, function(err, picture)
-//     {
-//         if(err)
-//         {
-//             console.log(err);
-//         }
-//         else
-//         {
-//             console.log("picture added to db!");
-//             console.log(picture);
-//         }
-//     }
-// );
+var Picture = require("../models/picture");
 
 router.get("/gallary", function(req, res) 
 {
