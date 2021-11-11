@@ -1,19 +1,22 @@
-var express = require("express");
-var app = express();
-var port = process.env.PORT || 3000;
+var     express = require("express"),
+        mongoose = require("mongoose"),
+        bodyParser = require("body-parser"),
+        app = express(),
+
+        Picture = require("./models/picture"),
+        Comment = require("./models/comment"),
+
+        port = process.env.PORT || 3000,
 
 
-var indexRoutes = require("./routes/index");
-var galaryRoutes = require("./routes/galary");
-var linksRoutes = require("./routes/links");
-var gamesRoutes = require("./routes/games");
-// var anni = require("./scripts/main");
+        indexRoutes = require("./routes/index"),
+        galaryRoutes = require("./routes/galary"),
+        linksRoutes = require("./routes/links"),
+        gamesRoutes = require("./routes/games");
 
 
-app.set("view engine", "ejs");
-
-
-
+mongoose.connect("mongodb://localhost/web");
+app.use(bodyParser.urlencoded({extended: true}));app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
 
 app.use(indexRoutes);
