@@ -15,7 +15,7 @@ var     express = require("express"),
         gamesRoutes = require("./routes/games");
 
 
-mongoose.connect("mongodb://localhost/web");
+mongoose.connect("mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority");
 app.use(bodyParser.urlencoded({extended: true}));app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
 
