@@ -40,11 +40,11 @@ body {
 }
 
 .slideshow li:nth-child(1) {
-    background-image: url(../image/IMG_20210613_000958_740.jpg)
+    background-image: url(../image/IMG_20210613_000958_794.jpg)
 }
 
 .slideshow li:nth-child(2) {
-    background-image: url(../image/IMG_20210613_000958_647.jpg);
+    background-image: url(../image/IMG_20210613_000958_773.jpg);
     animation-delay: 10s;
 }
 
@@ -54,12 +54,12 @@ body {
 }
 
 .slideshow li:nth-child(4) {
-    background-image: url(../image/IMG_20210613_000958_773.jpg);
+    background-image: url(../image/IMG_20210613_000958_647.jpg);
     animation-delay: 30s;
 }
 
 .slideshow li:nth-child(5) {
-    background-image: url(../image/IMG_20210613_000958_794.jpg);
+    background-image: url(../image/IMG_20210613_000958_740.jpg);
     animation-delay: 40s;
 }
 
