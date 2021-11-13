@@ -1,6 +1,9 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var router = express.Router();
+var flash = require("connect-flash");
+var middleware = require("../middleware");
+
 
 var Picture = require("../models/picture");
 
@@ -24,7 +27,7 @@ router.get("/gallary/local", function(req, res)
     });
 });
 
-router.get("/gallary/local/new", function(req, res)
+router.get("/gallary/local/new", middleware.isLoggedIn,function(req, res)
 {
     res.render("gallary/new");
 });
