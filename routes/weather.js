@@ -42,13 +42,6 @@ router.get("/weather/app", function(req, res)
     });
 });
 
-router.get("*", function(req, res) 
-{
-    res.render("weather/404", 
-    {
-        title: "Page not found!"
-    })
-});
 
 
 

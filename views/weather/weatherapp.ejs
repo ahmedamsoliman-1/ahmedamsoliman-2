@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Weather Application</title>
-        <link rel="stylesheet" href="stylesheets/weather.css"/> <!-- static path for public folder is already set in app.js -->
-    </head>
+<%- include ('../partials/header') %>
     <body>
         <div class="main-content">
             Weather Application
@@ -74,5 +69,6 @@ weatherForm.addEventListener("submit", (event) =>
     });
 });
         </script> <!-- absolute path -->
-    </body>
-</html>
+
+<!-- <%- include ('../partials/footer') %> -->
+
