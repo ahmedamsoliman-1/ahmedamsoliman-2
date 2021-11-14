@@ -32,7 +32,6 @@ router.get("/weather/app", function(req, res)
                 }
             );
         }
-        console.log(temperature, description, cityName);
         res.send(
         {
             temperature, 

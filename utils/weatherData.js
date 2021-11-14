@@ -12,7 +12,6 @@ const constansts =
 
 const weatherData = (address, callback) => {
     const url = constansts.openWeatherMap.BASE_URL + encodeURIComponent(address) + '&appid=' + constansts.openWeatherMap.SECRET_KEY;
-    console.log(url);
     request({url, json:true}, (error, {body}) => {
         if (error)
         {
