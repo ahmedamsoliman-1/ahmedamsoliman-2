@@ -66,7 +66,50 @@ router.get("/gallary/local/:id", function(req, res)
         }
         else
         {
-            res.render("gallary/show", {_pict: foundedPic});
+            res.render("gallary/show", {pic: foundedPic});
+        }
+    });
+});
+
+// Edit picture 
+router.get("/gallary/local/:id/edit", function(req, res)
+{
+    Picture.findById(req.params.id, function(err, foundedPic)
+    {   
+        res.render("gallary/edit", {pic: foundedPic});
+    });
+});
+
+//Update picture
+router.put("/gallary/local/:id", function(req, res)
+{
+    console.log("route");
+
+    Picture.findByIdAndUpdate(req.params.id, req.body.pic, function(err, updatePic)
+    {
+        if (err)
+        {
+            res.redirect("/gallary/local");
+        }
+        else
+        {
+            res.redirect("/gallary/local/" + req.params.id);
+        }
+    });
+});
+
+//Destroy picture
+router.delete("/gallary/local/:id", function(req, res)
+{
+    Picture.findByIdAndDelete(req.params.id, function(err)
+    {
+        if (err)
+        {
+            res.redirect("/gallary/local");
+        }
+        else
+        {
+            res.redirect("/gallary/local/");
         }
     });
 });

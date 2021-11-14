@@ -6,13 +6,13 @@
 
         <div class="col-md-12">
             <div class="thumbnail">
-                <img class="img-responsive" src="<%= _pict.image %>">
+                <img class="img-responsive" src="<%= pic.image %>">
                 <div class="caption-full">
-                    <h4><a><%= _pict.name %></a></h4>
-                    <p> <%= _pict.description %> </p>
+                    <h4><a><%= pic.name %></a></h4>
+                    <p> <%= pic.description %> </p>
 
-                    <a class="btn btn-large btn-warning" href="/_picts/<%= _pict._id %>/edit">Edit</a>
-                    <form id="delete-form" action="/_picts/<%= _pict._id %>?_method=DELETE" method="POST">
+                    <a class="btn btn-large btn-warning" href="/gallary/local/<%= pic._id %>/edit">Edit</a>
+                    <form id="delete-form" action="/gallary/local/<%= pic._id %>?_method=DELETE" method="POST">
                         <button class="btn btn-large btn-danger">Delete</button>
                     </form>
 
@@ -20,7 +20,7 @@
             </div>
             <div class="well">
                  <div class="text-right">
-                    <a class="btn btn-success" href="/_picts/<%= _pict._id %>/comments/new">Add new comment</a>
+                    <a class="btn btn-success" href="/pic/<%= pic._id %>/comments/new">Add new comment</a>
                  </div>
             </div>
 
