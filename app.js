@@ -1,5 +1,7 @@
 var     express = require("express"),
         mongoose = require("mongoose"),
+        hbs = require("hbs"),
+        path = require("path"),
         bodyParser = require("body-parser"),
         flash = require("connect-flash"),
         passport = require("passport"),
@@ -11,11 +13,14 @@ var     express = require("express"),
 
         port = process.env.PORT || 3000,
 
+        weatherData = require("./utils/weatherData"),
+
 
         indexRoutes = require("./routes/index"),
         gallaryRoutes = require("./routes/gallary"),
         linksRoutes = require("./routes/links"),
         gamesRoutes = require("./routes/games");
+        weatherRoutes = require("./routes/weather");
 
         var User = require("./models/user");
 
@@ -56,6 +61,7 @@ app.use(indexRoutes);
 app.use(gallaryRoutes);
 app.use(linksRoutes);
 app.use(gamesRoutes);
+app.use(weatherRoutes);
 // app.use(anni);
 
 app.listen(port, process.env.IP, function() {
