@@ -37,6 +37,7 @@
                     <li><a href="/games">Games</a></li>
                     <li><a href="/index">CV</a></li>
                     <li><a href="/weather">Weather</a></li>
+                    <li><a href="/links">External</a></li>
 
                     <% if(!currentUser) { %>
                         <li><a href="/login">Login</a></li>
@@ -44,7 +45,7 @@
                     <% } else { %>
                         <li><a href="#"> Signed in as <%= currentUser.username %> </a></li>
                         <li><a href="/logout">Log Out</a></li>
-                        <li><a href="/links">External</a></li>
+                        
                     <% } %>
                 </ul>
             </div>
