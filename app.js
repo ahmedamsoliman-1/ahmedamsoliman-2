@@ -22,6 +22,7 @@ var     express = require("express"),
         linksRoutes = require("./routes/links"),
         gamesRoutes = require("./routes/games");
         weatherRoutes = require("./routes/weather");
+        appsRoutes = require("./routes/apps");
 
         var User = require("./models/user");
 
@@ -65,6 +66,7 @@ app.use(gallaryRoutes);
 app.use(linksRoutes);
 app.use(gamesRoutes);
 app.use(weatherRoutes);
+app.use(appsRoutes);
 // app.use(anni);
 
 app.listen(port, process.env.IP, function() {
