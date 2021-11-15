@@ -36,5 +36,9 @@
     -moz-transition: background 0.6s;
 }
 
+.jumbotron
+{
+    text-align: center;
+}
 
 
