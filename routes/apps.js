@@ -12,4 +12,9 @@ router.get("/apps/calculator", function(req, res)
     res.render("apps/calculator")
 });
 
+router.get("/apps/calendar", function(req, res) 
+{
+    res.render("apps/calendar")
+});
+
 module.exports = router;
