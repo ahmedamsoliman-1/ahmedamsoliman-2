@@ -22,4 +22,9 @@ router.get("/apps/houndify", function(req, res)
     res.render("apps/houndify")
 });
 
+router.get("/apps/todo", function(req, res) 
+{
+    res.render("apps/todo")
+});
+
 module.exports = router;
