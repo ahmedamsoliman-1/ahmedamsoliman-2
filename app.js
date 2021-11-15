@@ -24,7 +24,7 @@ var     express = require("express"),
         weatherRoutes = require("./routes/weather"),
         appsRoutes = require("./routes/apps"),
 
-        var User = require("./models/user");
+        User = require("./models/user");
 
 
 
