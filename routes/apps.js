@@ -17,4 +17,9 @@ router.get("/apps/calendar", function(req, res)
     res.render("apps/calendar")
 });
 
+router.get("/apps/houndify", function(req, res) 
+{
+    res.render("apps/houndify")
+});
+
 module.exports = router;
