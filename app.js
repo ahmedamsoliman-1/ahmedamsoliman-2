@@ -20,13 +20,11 @@ var     express = require("express"),
         indexRoutes = require("./routes/index"),
         gallaryRoutes = require("./routes/gallary"),
         linksRoutes = require("./routes/links"),
-        gamesRoutes = require("./routes/games");
-        weatherRoutes = require("./routes/weather");
-        appsRoutes = require("./routes/apps");
+        gamesRoutes = require("./routes/games"),
+        weatherRoutes = require("./routes/weather"),
+        appsRoutes = require("./routes/apps"),
 
         var User = require("./models/user");
-
-        // User = require("./routes/user");
 
 
 
@@ -39,7 +37,8 @@ app.use(flash());
 
 // =========================================================
 // Passport configurations
-app.use(require("express-session")({
+app.use(require("express-session")(
+{
     secret: "Secret phrase",
     resave: false,
     saveUninitialized: false,
@@ -52,7 +51,8 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
-app.use(function(req, res, next) {
+app.use(function(req, res, next) 
+{
     res.locals.currentUser = req.user;
     res.locals.error = req.flash("error");
     res.locals.success = req.flash("success");
@@ -69,6 +69,7 @@ app.use(weatherRoutes);
 app.use(appsRoutes);
 // app.use(anni);
 
-app.listen(port, process.env.IP, function() {
-    console.log(`Personal server started  on port ${port}`);
+app.listen(port, process.env.IP, function() 
+{
+    console.log(`Website server started on port ${port}`);
 });
