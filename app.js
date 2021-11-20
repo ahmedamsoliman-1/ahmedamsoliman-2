@@ -10,6 +10,7 @@ var     express = require("express"),
         methodOverride = require("method-override"),
         https = require('https'),
         Houndify = require('houndify'),
+        cors = require('cors'),
         app = express(),
 
         // Picture = require("./models/picture"),
@@ -36,6 +37,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
 app.use(methodOverride("_method"));
 app.use(flash());
+app.use(cors());
 
 // =========================================================
 // Passport configurations

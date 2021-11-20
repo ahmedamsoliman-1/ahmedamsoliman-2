@@ -40,7 +40,7 @@ body {
 }
 
 .slideshow li:nth-child(1) {
-    background-image: url(../image/IMG_20210613_000958_794.jpg)
+    background-image: url(../image/IMG_20210613_000958_794.jpg);
 }
 
 .slideshow li:nth-child(2) {

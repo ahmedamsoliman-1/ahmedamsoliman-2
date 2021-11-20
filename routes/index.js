@@ -7,13 +7,13 @@ var middleware = require("../middleware");
 
 router.get("/", function(req, res) 
 {
-    res.render("landing")
+    res.render("landing");
 });
 
 
 router.get("/index", function(req, res) 
 {
-    res.render("index")
+    res.render("index");
 });
 
 

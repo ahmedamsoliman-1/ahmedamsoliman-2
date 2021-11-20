@@ -9,7 +9,7 @@ var Picture = require("../models/picture");
 
 router.get("/gallary", function(req, res) 
 {
-    res.render("gallary/gallary")
+    res.render("gallary/gallary");
 });
 
 router.get("/gallary/local", function(req, res) 
