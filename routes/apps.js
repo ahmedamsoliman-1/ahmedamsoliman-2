@@ -27,4 +27,9 @@ router.get("/apps/todo", function(req, res)
     res.render("apps/todo");
 });
 
+router.get("/apps/dogsrand", function(req, res) 
+{
+    res.render("apps/dogsrand");
+});
+
 module.exports = router;
