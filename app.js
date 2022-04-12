@@ -27,6 +27,7 @@ var     express = require("express"),
         gamesRoutes = require("./routes/games"),
         weatherRoutes = require("./routes/weather"),
         appsRoutes = require("./routes/apps"),
+        linkedinRoutes = require("./routes/linkedin"),
 
         User = require("./models/user");
 
@@ -71,6 +72,7 @@ app.use(linksRoutes);
 app.use(gamesRoutes);
 app.use(weatherRoutes);
 app.use(appsRoutes);
+app.use(linkedinRoutes);
 
 
 // =========================================================
