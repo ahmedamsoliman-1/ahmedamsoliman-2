@@ -27,7 +27,7 @@
         "houndify": "^1.0.1",
         "json-bigint": "^1.0.0",
         "method-override": "^3.0.0",
-        "minimist": "^1.2.5",
+        "minimist": "^1.2.6",
         "mongoose": "^6.0.12",
         "passport": "^0.5.0",
         "passport-local": "^1.0.0",
