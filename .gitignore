@@ -105,4 +105,5 @@ dist
 
 
 temp
+.config.json
 .vscode

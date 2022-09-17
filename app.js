@@ -1,5 +1,6 @@
 var     express = require("express"),
         mongoose = require("mongoose"),
+        dynamodb = require("dynamodb"),
         hbs = require("hbs"),
         path = require("path"),
         fs = require('fs'),
@@ -34,6 +35,7 @@ var     express = require("express"),
 
 
 mongoose.connect("mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority");
+// dynamodb.connect("mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
@@ -82,7 +84,7 @@ app.use(linkedinRoutes);
 var argv = require('minimist')(process.argv.slice(2));
 
 //config file
-var configFile = argv.config || 'config';
+var configFile = argv.config || '.config';
 var config = require(path.join(__dirname, configFile));
 
 //authenticates requests
