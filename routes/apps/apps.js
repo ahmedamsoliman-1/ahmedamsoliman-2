@@ -32,4 +32,9 @@ router.get("/apps/dogsrand", function(req, res)
     res.render("apps/dogsrand");
 });
 
+router.get("/apps/harrypotter", function(req, res) 
+{
+    res.render("apps/harrypotter");
+});
+
 module.exports = router;

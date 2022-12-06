@@ -28,7 +28,8 @@ var     express = require("express"),
         linksRoutes = require("./routes/links"),
         gamesRoutes = require("./routes/games"),
         weatherRoutes = require("./routes/weather"),
-        appsRoutes = require("./routes/apps"),
+        appsRoutes = require("./routes/apps/apps"),
+        appsRoutes_HarryPotter = require("./routes/apps/harryPotter"),
         linkedinRoutes = require("./routes/linkedin"),
 
         User = require("./models/user");
@@ -42,6 +43,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(methodOverride("_method"));
 app.use(flash());
 app.use(cors());
+// app.use(express.json());
 
 // =========================================================
 // Passport configurations
@@ -75,6 +77,7 @@ app.use(linksRoutes);
 app.use(gamesRoutes);
 app.use(weatherRoutes);
 app.use(appsRoutes);
+app.use(appsRoutes_HarryPotter);
 app.use(linkedinRoutes);
 
 
