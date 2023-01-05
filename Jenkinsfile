@@ -8,8 +8,7 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                sudo -S apt update
-                sudo -S apt install -y nodejs npm
+                apt install -y nodejs npm
                 nodejs --version
                 npm install
                 echo "Building stuff.."
