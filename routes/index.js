@@ -7,7 +7,7 @@ var middleware = require("../middleware");
 
 router.get("/", function(req, res) 
 {
-    res.render("landing");
+    res.render("landing", { hostName: require("os").hostname()});
 });
 
 
