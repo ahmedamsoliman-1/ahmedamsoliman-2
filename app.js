@@ -18,7 +18,8 @@ var     express = require("express"),
         // Comment = require("./models/comment"),
 
         port = process.env.PORT || 80,
-        ipaddress = require("ip").address(),
+        ipAddress = require("ip").address(),
+        hostName = require("os").hostname(),
 
         weatherData = require("./utils/weatherData"),
 
@@ -103,5 +104,5 @@ app.post('/textSearchProxy', bodyParser.text({ limit: '1mb' }), Houndify.Houndif
 
 app.listen(port, process.env.IP, function() 
 {
-    console.log(`Website server started on "${hostName}" at "http://${ipaddress}:${port}"`);
+    console.log(`Website server started on "${hostName}" at "http://${ipAddress}:${port}"`);
 });
