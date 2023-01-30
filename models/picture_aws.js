@@ -3,10 +3,6 @@
 var AWS = require('aws-sdk');
 require('dotenv').config();
 
-const { json } = require('body-parser');
-
-// you shouldn't hardcode your keys in production! See http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html
-// AWS.config.update({accessKeyId: process.env.accessKeyId, secretAccessKey: process.env.secretAccessKey});
 AWS.config.region = 'us-east-1'; // Region
 
 var lambda = new AWS.Lambda();
@@ -19,7 +15,6 @@ lambda.invoke(params, function(err, data) {
   
   JSONdata = JSON.parse(data.Payload);
 
-  console.log(process.env.region)
   return JSONdata;
 });
 
