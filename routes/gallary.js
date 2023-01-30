@@ -6,6 +6,7 @@ var middleware = require("../middleware");
 
 
 var Picture = require("../models/picture");
+var Picture_aws = require("../models/picture_aws");
 
 router.get("/gallary", function(req, res) 
 {
@@ -110,6 +111,32 @@ router.delete("/gallary/local/:id", function(req, res)
         else
         {
             res.redirect("/gallary/local/");
+        }
+    });
+});
+
+
+
+
+
+
+router.get("/gallary/all", function(req, res) 
+{
+    res.render("gallary/all", {aws_pic: JSONdata});
+});
+
+router.get("/gallary/all/:id", function(req, res)
+{
+    // Find the picture with provieded ID
+    Picture.findById(req.params.id, function(err, foundedPic)
+    {
+        if (err)
+        {
+            console.log(err);
+        }
+        else
+        {
+            res.render("gallary/show", {pic: foundedPic});
         }
     });
 });
