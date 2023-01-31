@@ -6,6 +6,7 @@ var middleware = require("../middleware");
 
 
 var Picture = require("../models/picture");
+var Picture_aws = require("../models/picture_aws");
 
 router.get("/gallary", function(req, res) 
 {
@@ -112,6 +113,16 @@ router.delete("/gallary/local/:id", function(req, res)
             res.redirect("/gallary/local/");
         }
     });
+});
+
+
+
+
+
+
+router.get("/gallary/all", function(req, res) 
+{
+    res.render("gallary/all", {aws_pic: JSONdata});
 });
 
 module.exports = router;
