@@ -15,8 +15,7 @@ lambda.invoke(params, function(err, data) {
   
   JSONdata = JSON.parse(data.Payload);
 
+  // console.log(JSONdata);
   return JSONdata;
 });
-
-
 
