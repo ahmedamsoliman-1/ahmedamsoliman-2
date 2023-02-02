@@ -29,6 +29,7 @@ var     express = require("express"),
         linksRoutes = require("./routes/links"),
         gamesRoutes = require("./routes/games"),
         weatherRoutes = require("./routes/weather"),
+        digitalBadgesRoutes = require("./routes/badges"),
         appsRoutes = require("./routes/apps/apps"),
         appsRoutes_HarryPotter = require("./routes/apps/harryPotter"),
         linkedinRoutes = require("./routes/linkedin"),
@@ -37,6 +38,7 @@ var     express = require("express"),
 
 
 mongoose.connect("mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority");
+
 // dynamodb.connect("mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
@@ -78,6 +80,7 @@ app.use(linksRoutes);
 app.use(gamesRoutes);
 app.use(weatherRoutes);
 app.use(appsRoutes);
+app.use(digitalBadgesRoutes);
 app.use(appsRoutes_HarryPotter);
 app.use(linkedinRoutes);
 
