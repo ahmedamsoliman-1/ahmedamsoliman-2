@@ -19,21 +19,26 @@
     <div id="landing-header">
       <h1>Welcome here! I am Ahmed from Sudan</h1>
       <a href="/games" class="btn btn-lg btn-success">Games</a>
-      <a href="/gallary" class="btn btn-lg btn-warning">gallary</a>
-      <a href="/index" class="btn btn-lg btn-info">CV</a>
-      <a href="/linkedin" class="btn btn-lg btn-primary">LinkedIn</a>
-      <a href="/weather" class="btn btn-lg btn-success">Weather</a>
+      <a href="/gallary" class="btn btn-lg btn-warning">Gallary</a>
+      <a href="/index" class="btn btn-lg btn-info">Web Resume</a>
       <a href="/apps" class="btn btn-lg btn-danger">Apps</a>
       <a href="/links" class="btn btn-lg btn-success">External</a>
-      <a href="/badges" class="btn btn-lg btn-primary"
-        >Badges and Certifications</a
-      >
+      <a href="/badges" class="btn btn-lg btn-danger">Badges and Certifications</a>
 
+
+
+      <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
       <% if(!currentUser) { %>
       <a href="/login" class="btn btn-lg btn-info">Login</a>
-      <a href="/register" class="btn btn-lg btn-danger">Sign Up</a>
+      <a href="/register" class="btn btn-lg btn-info">Sign Up</a>
       <% } else { %>
-      <a href="#" class="btn btn-lg btn-danger">
+      <a href="#" class="btn btn-lg btn-info">
         Signed in as <%= currentUser.username %>
       </a>
       <a href="/logout" class="btn btn-lg btn-info">Log Out</a>
