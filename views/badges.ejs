@@ -5,14 +5,14 @@
     <h1>Weclome To The Certifications Section</h1>
 </header>
 
-<header class="jumbotron">
-    <h2>AWS Certifications</h2>
-    <a href="https://www.credly.com/users/ahmed-ali-mohamed-soliman/badges" target="_blank" class="btn btn-warning">Credentials</a>
-    <h4>count: <%= awscert.length %></h4>
-</header>
-<div class="container">
-        <% awscert.forEach(function(pic) { %>
-            <div class="col-md-3 col-sm-6">
+    <header class="jumbotron">
+        <h2>AWS Certifications</h2>
+        <a href="https://www.credly.com/users/ahmed-ali-mohamed-soliman/badges" target="_blank" class="btn btn-warning">Credentials</a>
+        <h4>count: <%= awscert.length %></h4>
+    </header>
+    <div class="container">
+    <% awscert.forEach(function(pic) { %>
+        <div class="col-md-3 col-sm-6">
                 <div class="thumbnail">
                     <img src="<%= pic %>">
                     <div class="caption">
@@ -23,12 +23,58 @@
                     </p>
                 </div>
             </div>
-        <% }); %>
+            <% }); %>
+        </div>
     </div>
-</div>
+    
+    
+    <header class="jumbotron">
+        <h2>Percipio - Skillsoft Certifications</h2>
+        <a href="https://skillsoft.digitalbadges.skillsoft.com/profile/ahmedsoliman614032/wallet" target="_blank" class="btn btn-danger">Credentials</a>
+        <h4>count: <%= percipio.length %></h4>
+    </header>
+    <div class="container">
+        <% percipio.forEach(function(pic) { %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= pic %>">
+                    <div class="caption">
+                        <h4> <%= pic.split("ahmedalimsoliman-percipio-certs/")[1].replace(".png", "") %> </h4>
+                    </div>
+                    <p>
+                        <a href="<%= pic %>" target="_blank" class="btn btn-danger">Open</a>
+                    </p>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+    <header class="jumbotron">
+        <h2>Linkedin Courses Certifications</h2>
+        <a href="https://www.linkedin.com/in/ahmedalimsoliman/" target="_blank" class="btn btn-info">Credentials</a>
+        <h4>count: <%= linkedin.length %></h4>
+    </header>
+    <div class="container">
+            <% linkedin.forEach(function(pic) { %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
+                        <img src="<%= pic %>">
+                        <div class="caption">
+                            <h4> <%= pic.split("ahmedalimsoliman-linkedin-certs/")[1].replace(".png", "") %> </h4>
+                        </div>
+                        <p>
+                            <a href="<%= pic %>" target="_blank" class="btn btn-info">Open</a>
+                        </p>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
 
-<header class="jumbotron">
-    <h2>OA University Certifications</h2>
+
+    
+    <header class="jumbotron">
+        <h2>OA University Certifications</h2>
     <h4>count: <%= oau.length %></h4>
 </header>
 <div class="container">
@@ -70,49 +116,6 @@
     </div>
 </div>
 
-<header class="jumbotron">
-    <h2>Linkedin Courses Certifications</h2>
-    <a href="https://www.linkedin.com/in/ahmedalimsoliman/" target="_blank" class="btn btn-info">Credentials</a>
-    <h4>count: <%= linkedin.length %></h4>
-</header>
-<div class="container">
-        <% linkedin.forEach(function(pic) { %>
-            <div class="col-md-3 col-sm-6">
-                <div class="thumbnail">
-                    <img src="<%= pic %>">
-                    <div class="caption">
-                        <h4> <%= pic.split("ahmedalimsoliman-linkedin-certs/")[1].replace(".png", "") %> </h4>
-                    </div>
-                    <p>
-                        <a href="<%= pic %>" target="_blank" class="btn btn-info">Open</a>
-                    </p>
-                </div>
-            </div>
-        <% }); %>
-    </div>
-</div>
-
-<header class="jumbotron">
-    <h2>Percipio - Skillsoft Certifications</h2>
-    <a href="https://skillsoft.digitalbadges.skillsoft.com/profile/ahmedsoliman614032/wallet" target="_blank" class="btn btn-danger">Credentials</a>
-    <h4>count: <%= percipio.length %></h4>
-</header>
-<div class="container">
-        <% percipio.forEach(function(pic) { %>
-            <div class="col-md-3 col-sm-6">
-                <div class="thumbnail">
-                    <img src="<%= pic %>">
-                    <div class="caption">
-                        <h4> <%= pic.split("ahmedalimsoliman-percipio-certs/")[1].replace(".png", "") %> </h4>
-                    </div>
-                    <p>
-                        <a href="<%= pic %>" target="_blank" class="btn btn-danger">Open</a>
-                    </p>
-                </div>
-            </div>
-        <% }); %>
-    </div>
-</div>
 
 
 <header class="jumbotron">
