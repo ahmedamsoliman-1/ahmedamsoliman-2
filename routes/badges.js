@@ -71,9 +71,14 @@ JSONdata_linkedin = [
 ];
 JSONdata_other = [
   "https://s3.amazonaws.com/ahmedalimsoliman-other-certs/Cpp.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-other-certs/IELTS.jpg",
   "https://s3.amazonaws.com/ahmedalimsoliman-other-certs/Nanodegree_Cpp.jpg",
   "https://s3.amazonaws.com/ahmedalimsoliman-other-certs/SQL.jpg",
+
+  "https://s3.amazonaws.com/ahmedalimsoliman-other-certs/Excellenc_Arche.jpg",
+  "https://s3.amazonaws.com/ahmedalimsoliman-other-certs/Excellenc_Win.jpg",
+  "https://s3.amazonaws.com/ahmedalimsoliman-other-certs/CCNA_KYM.jpg",
+  "https://s3.amazonaws.com/ahmedalimsoliman-other-certs/CCTV_KYM.jpg",
+  "https://s3.amazonaws.com/ahmedalimsoliman-other-certs/IELTS.jpg",
 ];
 
 router.get("/badges", function (req, res) {
