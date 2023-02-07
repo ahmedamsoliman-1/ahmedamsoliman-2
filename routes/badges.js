@@ -45,6 +45,21 @@ JSONdata_percipio = [
 JSONdata_aws = [
   "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/Cloud Practitioner.png",
 ];
+JSONdata_aws_pdf = [
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/AWS Compute Services.pdf",
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/AWS EBS.pdf",
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/AWS Networking Basics.pdf",
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/AWS Security Identity and Compliance.pdf",
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/AWS Simple Storage S3.pdf",
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/AWS Storage.pdf",
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/AWS Technical Essentials.pdf",
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/Amazon API Gateway.pdf",
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/Amazon DynamoDB.pdf",
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/Amazon RDS Service Prime.pdf",
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/Amazon Route 53.pdf",
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/Database Offerings.pdf",
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/Introduction to AWS IAM.pdf",
+];
 JSONdata_linkedin = [
   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Advanced Python.png",
   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Algorithms.jpg",
@@ -81,6 +96,57 @@ JSONdata_other = [
   "https://s3.amazonaws.com/ahmedalimsoliman-other-certs/IELTS.jpg",
 ];
 
+// const AWS = require("aws-sdk");
+// const s3 = new AWS.S3({
+//   accessKeyId: "AKIAWKYYNFDWZE34KSBM",
+//   secretAccessKey: "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",
+// });
+// const BUCKET_NAME_AWS = "ahmedalimsoliman-aws-certs";
+// const BUCKET_NAME_OAU = "ahmedalimsoliman-oau-certs";
+
+// const listBuckets = (s3) => {
+//   s3.listBuckets(function (err, data) {
+//     if (err) {
+//       console.log("Error", err);
+//     } else {
+//       console.log("Success", data.Buckets);
+//     }
+//   });
+// };
+
+// // listBuckets(s3)
+
+// const listObjectsInBucket = (bucketName) => {
+//   var bucketParams = {
+//     Bucket: bucketName,
+//   };
+//   let outer_arr = [];
+
+//   s3.listObjects(bucketParams, function (err, data) {
+//     var links = [];
+//     if (err) {
+//       console.log("Error", err);
+//     } else {
+//       console.log("Success", data.Contents.length);
+
+//       // outer_arr = data.Contents;
+
+//       for (const id in data.Contents) {
+//         outer_arr.push(
+//           "https://s3.amazonaws.com/ahmedalimsoliman-oau-certs/" +
+//             data.Contents[id].Key
+//         );
+//       }
+//     }
+
+//     // return outer_arr;
+//     // console.log(outer_arr);
+//   });
+//   return outer_arr;
+// };
+
+// console.log(listObjectsInBucket(BUCKET_NAME_OAU));
+
 router.get("/badges", function (req, res) {
   res.render("badges", {
     oau: JSONdata_oau,
@@ -88,6 +154,7 @@ router.get("/badges", function (req, res) {
     sudan: JSONdata_sudanese,
     percipio: JSONdata_percipio,
     awscert: JSONdata_aws,
+    aws_pdf: JSONdata_aws_pdf,
     linkedin: JSONdata_linkedin,
     other: JSONdata_other,
   });

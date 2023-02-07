@@ -60,7 +60,7 @@
                     <div class="thumbnail">
                         <img src="<%= pic %>">
                         <div class="caption">
-                            <h4> <%= pic.split("ahmedalimsoliman-linkedin-certs/")[1].replace(".png", "") %> </h4>
+                            <h4> <%= pic.split("ahmedalimsoliman-linkedin-certs/")[1].replace(".png", "").replace(".jpg", "") %> </h4>
                         </div>
                         <p>
                             <a href="<%= pic %>" target="_blank" class="btn btn-info">Open</a>
@@ -137,6 +137,29 @@
             </div>
         <% }); %>
     </div>
+</div>
+
+<header class="jumbotron">
+    <h2>AWS Trainning Certifications</h2>
+    <h4>count: <%= aws_pdf.length %></h4>
+</header>
+<div class="container">
+        <% aws_pdf.forEach(function(pic) { %>
+            <div class="col-md-3 col-sm-6">
+                <div >
+                    <embed src="<%= pic %>" width="300px" height="200px" /> 
+                    <div class="caption">
+                        <h4> <%= pic.split("ahmedalimsoliman-aws-certs/")[1].replace(".pdf", "").replace("aws-trainning/", "") %> </h4>
+                    </div>
+                    <p>
+                        <a href="<%= pic %>" target="_blank" class="btn btn-danger">Open</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
 </div>
 
 <header class="jumbotron">
