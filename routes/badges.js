@@ -1,13 +1,28 @@
 var express = require("express");
 var router = express.Router();
 
-JSONdata_oau = [
-  "https://s3.amazonaws.com/ahmedalimsoliman-oau-certs/Certificate_1.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-oau-certs/Certificate_2.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-oau-certs/Experience_OAU.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-oau-certs/Transcript_1.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-oau-certs/Transcript_2.jpg",
-];
+var AWS = require("aws-sdk");
+require("dotenv").config();
+
+AWS.config.region = "us-east-1"; // Region
+
+var lambda = new AWS.Lambda();
+
+var params_1 = { FunctionName: "return_s3_object_oau" };
+
+lambda.invoke(params_1, function (err, data) {
+  if (err) console.log(err, err.stack);
+  JSONdata_oau = JSON.parse(data.Payload);
+  return JSONdata_oau;
+});
+
+// JSONdata_oau = [
+//   "https://s3.amazonaws.com/ahmedalimsoliman-oau-certs/Certificate_1.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-oau-certs/Certificate_2.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-oau-certs/Experience_OAU.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-oau-certs/Transcript_1.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-oau-certs/Transcript_2.jpg",
+// ];
 JSONdata_hcl = [
   "https://s3.amazonaws.com/ahmedalimsoliman-hcl-certs/10_2019__Export_Compliance.jpg",
   "https://s3.amazonaws.com/ahmedalimsoliman-hcl-certs/10_2022__DevJr.jpg",
