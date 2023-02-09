@@ -2,9 +2,7 @@
 
 [![Twitter](https://img.shields.io/twitter/follow/ahmedamsoliman?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/ahmedamsoliman)
 
-
- 
-### Connect with me: 
+### Connect with me:
 
 [<img align="left" alt="ahmedamsoliman | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
 [<img align="left" alt="ahmedamsoliman | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
@@ -35,7 +33,6 @@
 ---
 
 [![Ahmed's GitHub stats](https://github-readme-stats.vercel.app/api?username=ahmedamsoliman-1&show_icons=true&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
-
 
 [website]: https://ahmedamsoliman.com
 [course]: http://vsCodeHero.com
