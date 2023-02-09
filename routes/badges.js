@@ -10,11 +10,11 @@ var lambda = new AWS.Lambda();
 
 var params_1 = { FunctionName: "return_s3_object_oau" };
 
-lambda.invoke(params_1, function (err, data) {
-  if (err) console.log(err, err.stack);
-  JSONdata_oau = JSON.parse(data.Payload);
-  return JSONdata_oau;
-});
+// lambda.invoke(params_1, function (err, data) {
+//   if (err) console.log(err, err.stack);
+//   JSONdata_oau = JSON.parse(data.Payload);
+//   return JSONdata_oau;
+// });
 
 // JSONdata_oau = [
 //   "https://s3.amazonaws.com/ahmedalimsoliman-oau-certs/Certificate_1.jpg",
