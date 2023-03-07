@@ -6,15 +6,15 @@ require("dotenv").config();
 
 AWS.config.region = "us-east-1"; // Region
 
-// var lambda = new AWS.Lambda();
+var lambda = new AWS.Lambda();
 
-// var params_1 = { FunctionName: "return_s3_object_oau" };
+var params_1 = { FunctionName: "return_s3_object_linkedin" };
 
-// lambda.invoke(params_1, function (err, data) {
-//   if (err) console.log(err, err.stack);
-//   JSONdata_oau = JSON.parse(data.Payload);
-//   return JSONdata_oau;
-// });
+lambda.invoke(params_1, function (err, data) {
+  if (err) console.log(err, err.stack);
+  JSONdata_linkedin = JSON.parse(data.Payload);
+  return JSONdata_linkedin;
+});
 
 const s3 = new AWS.S3({
   accessKeyId: "AKIAWKYYNFDW75QIRLHP",
@@ -137,6 +137,8 @@ JSONdata_percipio = [
   "https://s3.amazonaws.com/ahmedalimsoliman-percipio-certs/Team Goals.png",
 ];
 JSONdata_aws = [
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/Solutions Architect.png",
+  "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/AWS Architecting.png",
   "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/Cloud Practitioner.png",
 ];
 JSONdata_aws_pdf = [
@@ -164,30 +166,30 @@ JSONdata_aws_pdf = [
   "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/Introduction to AWS IAM.pdf",
   "https://s3.amazonaws.com/ahmedalimsoliman-aws-certs/aws-trainning/Monitoring and Troubleshooting.pdf",
 ];
-JSONdata_linkedin = [
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Advanced Python.png",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Algorithms.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Cpp Code Clinic.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Cpp LinkedIn.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Cpp Move Semantics.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Cpp Smart Pointers.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Cpp.png",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/CppDeveloper.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/DataStructures.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Docker.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/GitLab.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/InterpersonalCommunication.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/InterpersonalCommunicationPMI.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/IoT.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Jira.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Learning Cpp.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/LearningToBeApproachable.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/OOP.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Problem Solving Techniques PMI.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Problem Solving Techniques.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Regex.jpg",
-  "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/SoftwareDesignCode&DesignSmells.jpg",
-];
+// JSONdata_linkedin = [
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Advanced Python.png",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Algorithms.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Cpp Code Clinic.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Cpp LinkedIn.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Cpp Move Semantics.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Cpp Smart Pointers.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Cpp.png",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/CppDeveloper.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/DataStructures.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Docker.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/GitLab.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/InterpersonalCommunication.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/InterpersonalCommunicationPMI.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/IoT.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Jira.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Learning Cpp.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/LearningToBeApproachable.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/OOP.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Problem Solving Techniques PMI.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Problem Solving Techniques.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/Regex.jpg",
+//   "https://s3.amazonaws.com/ahmedalimsoliman-linkedin-certs/SoftwareDesignCode&DesignSmells.jpg",
+// ];
 JSONdata_other = [
   "https://s3.amazonaws.com/ahmedalimsoliman-other-certs/Cpp.jpg",
   "https://s3.amazonaws.com/ahmedalimsoliman-other-certs/Nanodegree_Cpp.jpg",
