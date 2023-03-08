@@ -2,9 +2,8 @@ var express = require("express");
 var router = express.Router();
 
 var AWS = require("aws-sdk");
-require("dotenv").config();
-
-AWS.config.region = "us-east-1"; // Region
+AWS.config.loadFromPath("./config.json");
+const s3 = new AWS.S3();
 
 var lambda = new AWS.Lambda();
 
@@ -16,42 +15,7 @@ lambda.invoke(params_1, function (err, data) {
   return JSONdata_linkedin;
 });
 
-const s3 = new AWS.S3({
-  accessKeyId: "AKIAWKYYNFDW75QIRLHP",
-  secretAccessKey: "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",
-});
 const BUCKET_NAME_AWS = "ahmedalimsoliman-aws-certs";
-const BUCKET_NAME_OAU = "ahmedalimsoliman-oau-certs";
-
-// Import required AWS SDK clients and commands for Node.js.
-// import { ListObjectsCommand } from "@aws-sdk/client-s3";
-// import { s3Client } from "./libs/s3Client.js"; // Helper function that creates an Amazon S3 service client module.
-
-// Create the parameters for the bucket
-// export const bucketParams = { Bucket: "BUCKET_NAME" };
-
-// const run = async () => {
-//   try {
-//     const data = await s3Client.send(new ListObjectsCommand(bucketParams));
-//     console.log("Success", data);
-//     return data; // For unit tests.
-//   } catch (err) {
-//     console.log("Error", err);
-//   }
-// };
-// run();
-
-// const listBuckets = (s3) => {
-//   s3.listBuckets(function (err, data) {
-//     if (err) {
-//       console.log("Error", err);
-//     } else {
-//       console.log("Success", data.Buckets);
-//     }
-//   });
-// };
-
-// // listBuckets(s3)
 
 const listObjectsInBucket = (bucketName) => {
   var bucketParams = {
@@ -63,37 +27,12 @@ const listObjectsInBucket = (bucketName) => {
       console.log("Error", err);
     } else {
       console.log("Success", data.Contents.length);
-
-      str_inner = await data.Contents;
-
-      // for (let i = 0; i < data.Contents.length; i++) {
-      //   console.log(data.Contents[i]["Key"]);
-      //   arr.push(data.Contents[i]["Key"]);
-      // }
     }
   });
   return s3.listObjects.str_inner;
 };
 
 listObjectsInBucket(BUCKET_NAME_AWS);
-console.log(listObjectsInBucket(BUCKET_NAME_AWS));
-// function listS3Objects(bucketName) {
-//   // const AWS = require("aws-sdk");
-//   // const s3 = new AWS.S3();
-
-//   return new Promise((resolve, reject) => {
-//     s3.listObjects({ Bucket: bucketName }, (err, data) => {
-//       if (err) {
-//         reject(err);
-//       } else {
-//         resolve(data.Contents); // array of objects with key and size properties
-//         console.log(data.Contents);
-//       }
-//     });
-//   });
-// }
-
-// console.log(listS3Objects(BUCKET_NAME_AWS));
 
 JSONdata_oau = [
   "https://s3.amazonaws.com/ahmedalimsoliman-oau-certs/Certificate_1.jpg",
