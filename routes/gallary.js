@@ -204,11 +204,15 @@ aws_pic = [
   "https://s3.amazonaws.com/ahmedalisolimanpics/06_02_Feb_2022_206_160146_924.jpg",
   "https://s3.amazonaws.com/ahmedalisolimanpics/06_02_Feb_2022_206_160146_970.jpg",
   "https://s3.amazonaws.com/ahmedalisolimanpics/06_02_Feb_2022_206_160146_992.jpg",
-  "https://s3.amazonaws.com/ahmedalisolimanpics/06_02_Feb_2022_206_160147_026.jpg"
+  "https://s3.amazonaws.com/ahmedalisolimanpics/06_02_Feb_2022_206_160147_026.jpg",
 ];
 
 router.get("/gallary/all", function (req, res) {
   res.render("gallary/all", { aws_pic: aws_pic });
+});
+
+router.get("/gallary/fluid", function (req, res) {
+  res.render("gallary/fluid");
 });
 
 module.exports = router;
