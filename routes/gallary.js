@@ -237,8 +237,4 @@ router.get("/gallary/all", function (req, res) {
   res.render("gallary/all", { all: all });
 });
 
-router.get("/gallary/fluid", function (req, res) {
-  res.render("gallary/fluid");
-});
-
 module.exports = router;
