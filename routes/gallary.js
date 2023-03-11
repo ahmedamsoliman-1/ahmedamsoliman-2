@@ -207,20 +207,30 @@ router.delete("/gallary/local/:id", function (req, res) {
 //   "https://s3.amazonaws.com/ahmedalisolimanpics/06_02_Feb_2022_206_160147_026.jpg",
 // ];
 
-var AWS = require("aws-sdk");
-AWS.config.loadFromPath("./config.json");
-const s3 = new AWS.S3();
+// var AWS = require("aws-sdk");
+// var https = require("https");
+const request = require("request");
+// AWS.config.loadFromPath("./config.json");
+// const s3 = new AWS.S3();
 
-var lambda = new AWS.Lambda();
+// var lambda = new AWS.Lambda();
 
-var return_s3_bucket_object_names = {
-  FunctionName: "return_s3_bucket_object_names",
-};
+// var return_s3_bucket_object_names = {
+//   FunctionName: "return_s3_bucket_object_names",
+// };
 
-lambda.invoke(return_s3_bucket_object_names, function (err, data) {
-  if (err) console.log(err, err.stack);
-  all = JSON.parse(data.Payload);
-  return all;
+let url = "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/all";
+
+let options = { json: true };
+
+request(url, options, (error, res, body) => {
+  if (error) {
+    return console.log(error);
+  }
+
+  if (!error && res.statusCode == 200) {
+    all = res.body;
+  }
 });
 
 router.get("/gallary/all", function (req, res) {

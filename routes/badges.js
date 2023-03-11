@@ -1,66 +1,156 @@
 var express = require("express");
+var request = require("request");
 var router = express.Router();
 
-var AWS = require("aws-sdk");
-AWS.config.loadFromPath("./config.json");
-const s3 = new AWS.S3();
+// https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/aws
 
-var lambda = new AWS.Lambda();
+let url_linkedin =
+  "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/linkedin";
+let url_oau = "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/oau";
+let url_others =
+  "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/others";
+let url_sudanese =
+  "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/sudanese";
 
-var return_s3_object_linkedin = { FunctionName: "return_s3_object_linkedin" };
-var return_s3_object_other = { FunctionName: "return_s3_object_other" };
-var return_s3_object_percipio = { FunctionName: "return_s3_object_percipio" };
-var return_s3_object_sudanese = { FunctionName: "return_s3_object_sudanese" };
-var return_s3_object_oau = { FunctionName: "return_s3_object_oau" };
-var return_s3_object_hcl = { FunctionName: "return_s3_object_hcl" };
-var return_s3_object_aws = { FunctionName: "return_s3_object_aws" };
+let url_hcl = "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/hcl";
+let url_percipio =
+  "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/percipio";
+let url_aws = "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/aws";
 
-lambda.invoke(return_s3_object_linkedin, function (err, data) {
-  if (err) console.log(err, err.stack);
-  JSONdata_linkedin = JSON.parse(data.Payload);
-  return JSONdata_linkedin;
+let options = { json: true };
+
+request(url_linkedin, options, (error, res, body) => {
+  if (error) {
+    return console.log(error);
+  }
+
+  if (!error && res.statusCode == 200) {
+    JSONdata_linkedin = res.body;
+  }
 });
 
-lambda.invoke(return_s3_object_other, function (err, data) {
-  if (err) console.log(err, err.stack);
-  JSONdata_other = JSON.parse(data.Payload);
-  return JSONdata_other;
+request(url_oau, options, (error, res, body) => {
+  if (error) {
+    return console.log(error);
+  }
+
+  if (!error && res.statusCode == 200) {
+    JSONdata_oau = res.body;
+  }
 });
 
-lambda.invoke(return_s3_object_percipio, function (err, data) {
-  if (err) console.log(err, err.stack);
-  JSONdata_percipio = JSON.parse(data.Payload);
-  return JSONdata_percipio;
+request(url_others, options, (error, res, body) => {
+  if (error) {
+    return console.log(error);
+  }
+
+  if (!error && res.statusCode == 200) {
+    JSONdata_other = res.body;
+  }
 });
 
-lambda.invoke(return_s3_object_sudanese, function (err, data) {
-  if (err) console.log(err, err.stack);
-  JSONdata_sudanese = JSON.parse(data.Payload);
-  return JSONdata_sudanese;
+request(url_sudanese, options, (error, res, body) => {
+  if (error) {
+    return console.log(error);
+  }
+
+  if (!error && res.statusCode == 200) {
+    JSONdata_sudanese = res.body;
+  }
 });
 
-lambda.invoke(return_s3_object_oau, function (err, data) {
-  if (err) console.log(err, err.stack);
-  JSONdata_oau = JSON.parse(data.Payload);
-  return JSONdata_oau;
+request(url_hcl, options, (error, res, body) => {
+  if (error) {
+    return console.log(error);
+  }
+
+  if (!error && res.statusCode == 200) {
+    JSONdata_hcl = res.body;
+  }
 });
 
-lambda.invoke(return_s3_object_hcl, function (err, data) {
-  if (err) console.log(err, err.stack);
-  JSONdata_hcl = JSON.parse(data.Payload);
-  return JSONdata_hcl;
+request(url_percipio, options, (error, res, body) => {
+  if (error) {
+    return console.log(error);
+  }
+
+  if (!error && res.statusCode == 200) {
+    JSONdata_percipio = res.body;
+  }
 });
 
-lambda.invoke(return_s3_object_aws, function (err, data) {
-  if (err) console.log(err, err.stack);
-  JSONdata_aws_trainning = JSON.parse(data.Payload)[0];
-  JSONdata_aws_badges = JSON.parse(data.Payload)[1];
-  JSONdata_aws_certifications = JSON.parse(data.Payload)[2];
+request(url_aws, options, (error, res, body) => {
+  if (error) {
+    return console.log(error);
+  }
 
-  return (
-    JSONdata_aws_trainning, JSONdata_aws_badges, JSONdata_aws_certifications
-  );
+  if (!error && res.statusCode == 200) {
+    JSONdata_aws_trainning = res.body[0];
+    JSONdata_aws_badges = res.body[1];
+    JSONdata_aws_certifications = res.body[2];
+  }
 });
+
+// var AWS = require("aws-sdk");
+// AWS.config.loadFromPath("./config.json");
+// const s3 = new AWS.S3();
+
+// var lambda = new AWS.Lambda();
+
+// var return_s3_object_linkedin = { FunctionName: "return_s3_object_linkedin" };
+// var return_s3_object_other = { FunctionName: "return_s3_object_other" };
+// var return_s3_object_percipio = { FunctionName: "return_s3_object_percipio" };
+// var return_s3_object_sudanese = { FunctionName: "return_s3_object_sudanese" };
+// var return_s3_object_oau = { FunctionName: "return_s3_object_oau" };
+// var return_s3_object_hcl = { FunctionName: "return_s3_object_hcl" };
+// var return_s3_object_aws = { FunctionName: "return_s3_object_aws" };
+
+// lambda.invoke(return_s3_object_linkedin, function (err, data) {
+//   if (err) console.log(err, err.stack);
+//   JSONdata_linkedin = JSON.parse(data.Payload);
+//   return JSONdata_linkedin;
+// });
+
+// lambda.invoke(return_s3_object_other, function (err, data) {
+//   if (err) console.log(err, err.stack);
+//   JSONdata_other = JSON.parse(data.Payload);
+//   return JSONdata_other;
+// });
+
+// lambda.invoke(return_s3_object_percipio, function (err, data) {
+//   if (err) console.log(err, err.stack);
+//   JSONdata_percipio = JSON.parse(data.Payload);
+//   return JSONdata_percipio;
+// });
+
+// lambda.invoke(return_s3_object_sudanese, function (err, data) {
+//   if (err) console.log(err, err.stack);
+//   JSONdata_sudanese = JSON.parse(data.Payload);
+//   return JSONdata_sudanese;
+// });
+
+// lambda.invoke(return_s3_object_oau, function (err, data) {
+//   if (err) console.log(err, err.stack);
+//   JSONdata_oau = JSON.parse(data.Payload);
+//   return JSONdata_oau;
+// });
+
+// lambda.invoke(return_s3_object_hcl, function (err, data) {
+//   if (err) console.log(err, err.stack);
+//   JSONdata_hcl = JSON.parse(data.Payload);
+//   return JSONdata_hcl;
+// });
+
+// lambda.invoke(return_s3_object_aws, function (err, data) {
+//   if (err) console.log(err, err.stack);
+//   JSONdata_aws_trainning = JSON.parse(data.Payload)[0];
+//   JSONdata_aws_badges = JSON.parse(data.Payload)[1];
+//   JSONdata_aws_certifications = JSON.parse(data.Payload)[2];
+
+//   return (
+//     JSONdata_aws_trainning, JSONdata_aws_badges, JSONdata_aws_certifications
+//   );
+// });
 
 // const BUCKET_NAME_AWS = "ahmedalimsoliman-aws-certs";
 
