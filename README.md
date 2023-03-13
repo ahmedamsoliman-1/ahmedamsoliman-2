@@ -4,6 +4,8 @@
 
 ### Connect with me:
 
+[<img align="left" alt="ahmedamsoliman | Instagram" width="22px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/web-3097086-2594910.png?f=webp&w=256" />][personal]
+[<img align="left" alt="ahmedamsoliman | Instagram" width="22px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/big-data-1796902-1526167.png?f=webp&w=256" />][web_resume]
 [<img align="left" alt="ahmedamsoliman | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
 [<img align="left" alt="ahmedamsoliman | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 [<img align="left" alt="ahmedamsoliman | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
@@ -43,4 +45,6 @@
 [webdevplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAJ0WbEsFA9W3I1W-g_BTsbt
 [jsplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALRJKu7wfXby3MKeflhTu6B
 [cssplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALSdvZuEh6gqQdmDoDIoqz4
+[personal]: http://ahmedalimsolimansdn-930971801.us-east-1.elb.amazonaws.com/
+[web_resume]: http://webresume.s3-website-us-east-1.amazonaws.com/
 [reactplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAK4TdffpxKY3QGyHCpxFcQ0
