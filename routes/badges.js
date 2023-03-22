@@ -17,6 +17,9 @@ let url_percipio =
   "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/percipio";
 let url_aws = "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/aws";
 
+let all_urls =
+  "https://xx6y4bkrsg.execute-api.us-east-1.amazonaws.com/prod/certs";
+
 let options = { json: true };
 
 request(url_linkedin, options, (error, res, body) => {

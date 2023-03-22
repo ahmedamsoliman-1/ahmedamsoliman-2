@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .filterDiv {
+      float: left;
+      background-color: #2196f3;
+      color: #ffffff;
+      width: 100px;
+      line-height: 100px;
+      text-align: center;
+      margin: 2px;
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .container {
+      margin-top: 20px;
+      overflow: hidden;
+    }
+
+    /* Style the buttons */
+    .btn {
+      border: none;
+      outline: none;
+      padding: 12px 16px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #ddd;
+    }
+
+    .btn.active {
+      background-color: #666;
+      color: white;
+    }
+  </style>
+  <body>
+    <h2>Filter DIV Elements</h2>
+
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')">
+        Show all
+      </button>
+      <button class="btn" onclick="filterSelection('cars')">Cars</button>
+      <button class="btn" onclick="filterSelection('animals')">Animals</button>
+      <button class="btn" onclick="filterSelection('fruits')">Fruits</button>
+      <button class="btn" onclick="filterSelection('colors')">Colors</button>
+    </div>
+
+    <div class="container">
+      <div class="filterDiv cars">BMW</div>
+      <div class="filterDiv colors fruits">Orange</div>
+      <div class="filterDiv cars">Volvo</div>
+      <div class="filterDiv colors">Red</div>
+      <div class="filterDiv cars animals">Mustang</div>
+      <div class="filterDiv colors">Blue</div>
+      <div class="filterDiv animals">Cat</div>
+      <div class="filterDiv animals">Dog</div>
+      <div class="filterDiv fruits">Melon</div>
+      <div class="filterDiv fruits animals">Kiwi</div>
+      <div class="filterDiv fruits">Banana</div>
+      <div class="filterDiv fruits">Lemon</div>
+      <div class="filterDiv animals">Cow</div>
+    </div>
+
+    <script>
+      filterSelection("all");
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+          }
+        }
+      }
+
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+    </script>
+  </body>
+</html>
+
+<!-- Didn't work as expected <%- include ('../partials/header') %> -->
+<!-- Didn't work as expected <%- include ('../partials/header') %> -->
+<!-- Didn't work as expected <%- include ('../partials/header') %> -->
+<!-- Didn't work as expected <%- include ('../partials/header') %> -->
+<!-- Didn't work as expected <%- include ('../partials/header') %> -->
+
+<div class="container">
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Weclome To My gallary!</h1>
+      <a>View my ALL pics throuh time</a>
+      <div><a>Number of image: <%= all_2005.length %></a></div>
+    </div>
+  </header>
+
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')">
+      Show all
+    </button>
+    <button class="btn" onclick="filterSelection('2005')">2005</button>
+    <button class="btn" onclick="filterSelection('2008')">2008</button>
+  </div>
+
+  <br />
+
+  <div class="filterDiv 2005" style="display: flex; flex-wrap: wrap">
+    <% all_2005.forEach(function(pic) { %>
+    <div class="col-md-3 col-sm-6">
+      <div class="thumbnail">
+        <!-- <img src="<%= pic %>" /> -->
+        <div class="caption">
+          <h4>
+            <!-- "https://s3.amazonaws.com/ahmedamsoliman-replica/IAM/Years/2020/1/01_01_Jan_2020_24626.jpg", -->
+            <%= pic.split("ahmedamsoliman-replica/IAM/Years/")[1].
+            replace(".jpg","").replace("2020/", "").replace("1/", "") %>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+
+  <div class="filterDiv 2008" style="display: flex; flex-wrap: wrap">
+    <% all_2008.forEach(function(pic) { %>
+    <div class="col-md-3 col-sm-6">
+      <div class="thumbnail">
+        <!-- <img src="<%= pic %>" /> -->
+        <div class="caption">
+          <h4>
+            <!-- "https://s3.amazonaws.com/ahmedamsoliman-replica/IAM/Years/2020/1/01_01_Jan_2020_24626.jpg", -->
+            <%= pic.split("ahmedamsoliman-replica/IAM/Years/")[1].
+            replace(".jpg","").replace("2020/", "").replace("1/", "") %>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+
+  <script>
+    filterSelection("all");
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+          element.className += " " + arr2[i];
+        }
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
+</div>
