@@ -22,6 +22,7 @@ var express = require("express"),
   weatherData = require("./utils/weatherData"),
   indexRoutes = require("./routes/index"),
   gallaryRoutes = require("./routes/gallary"),
+  yearsRoutes = require("./routes/years"),
   linksRoutes = require("./routes/links"),
   gamesRoutes = require("./routes/games"),
   weatherRoutes = require("./routes/weather"),
@@ -70,6 +71,7 @@ app.use(function (req, res, next) {
 
 app.use(indexRoutes);
 app.use(gallaryRoutes);
+app.use(yearsRoutes);
 app.use(linksRoutes);
 app.use(gamesRoutes);
 app.use(weatherRoutes);
