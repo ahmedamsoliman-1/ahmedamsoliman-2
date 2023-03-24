@@ -23,214 +23,120 @@ let _2021 = _api + "2021";
 let _2022 = _api + "2022";
 let _2023 = _api + "2023";
 
+let _year_page = "0ndated";
+
 let options = { json: true };
 
-router.get("/gallary/all/0ndated", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _0ndated })[0], function (req, res) {
   request(_0ndated, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/0ndated", { all: all, y: "0ndated" });
+  res.render(_year_page, { all: all, y: Object.keys({ _0ndated })[0] });
 });
 
-router.get("/gallary/all/2005", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2005 })[0], function (req, res) {
   request(_2005, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2005", { all: all, y: "2005" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2005 })[0] });
 });
 
-router.get("/gallary/all/2008", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2008 })[0], function (req, res) {
   request(_2008, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2008", { all: all, y: "2008" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2008 })[0] });
 });
 
-router.get("/gallary/all/2010", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2010 })[0], function (req, res) {
   request(_2010, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2010", { all: all, y: "2010" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2010 })[0] });
 });
 
-router.get("/gallary/all/2012", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2012 })[0], function (req, res) {
   request(_2012, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2012", { all: all, y: "2012" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2012 })[0] });
 });
 
-router.get("/gallary/all/2013", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2013 })[0], function (req, res) {
   request(_2013, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2013", { all: all, y: "2013" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2013 })[0] });
 });
 
-router.get("/gallary/all/2014", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2014 })[0], function (req, res) {
   request(_2014, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2014", { all: all, y: "2014" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2014 })[0] });
 });
 
-router.get("/gallary/all/2015", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2015 })[0], function (req, res) {
   request(_2015, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2015", { all: all, y: "2015" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2015 })[0] });
 });
 
-router.get("/gallary/all/2016", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2016 })[0], function (req, res) {
   request(_2016, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2016", { all: all, y: "2016" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2016 })[0] });
 });
 
-router.get("/gallary/all/2017", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2017 })[0], function (req, res) {
   request(_2017, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2017", { all: all, y: "2017" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2017 })[0] });
 });
 
-router.get("/gallary/all/2018", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2018 })[0], function (req, res) {
   request(_2018, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2018", { all: all, y: "2018" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2018 })[0] });
 });
 
-router.get("/gallary/all/2019", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2019 })[0], function (req, res) {
   request(_2019, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2019", { all: all, y: "2019" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2019 })[0] });
 });
 
-router.get("/gallary/all/2020", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2020 })[0], function (req, res) {
   request(_2020, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2020", { all: all, y: "2020" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2020 })[0] });
 });
 
-router.get("/gallary/all/2021", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2021 })[0], function (req, res) {
   request(_2021, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2021", { all: all, y: "2021" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2021 })[0] });
 });
 
-router.get("/gallary/all/2022", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2022 })[0], function (req, res) {
   request(_2022, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2022", { all: all, y: "2022" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2022 })[0] });
 });
 
-router.get("/gallary/all/2023", function (req, res) {
+router.get("/gallary/all/" + Object.keys({ _2023 })[0], function (req, res) {
   request(_2023, options, (error, res, body) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    if (!error && res.statusCode == 200) {
-      all = res.body;
-    }
+    all = res.body;
   });
-  res.render("years/2023", { all: all, y: "2023" });
+  res.render(_year_page, { all: all, y: Object.keys({ _2023 })[0] });
 });
 
 module.exports = router;
