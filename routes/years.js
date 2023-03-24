@@ -2,23 +2,26 @@ var express = require("express");
 var request = require("request");
 var router = express.Router();
 
-let _0ndated =
-  "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/0ndated";
-let _2005 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2005";
-let _2008 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2008";
-let _2010 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2010";
-let _2012 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2012";
-let _2013 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2013";
-let _2014 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2014";
-let _2015 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2015";
-let _2016 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2016";
-let _2017 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2017";
-let _2018 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2018";
-let _2019 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2019";
-let _2020 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2020";
-let _2021 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2021";
-let _2022 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2022";
-let _2023 = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/2023";
+let _y = "https://s3.amazonaws.com/ahmedamsoliman-replica/IAM/Years/";
+
+let _api = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/";
+
+let _0ndated = _api + "0ndated";
+let _2005 = _api + "2005";
+let _2008 = _api + "2008";
+let _2010 = _api + "2010";
+let _2012 = _api + "2012";
+let _2013 = _api + "2013";
+let _2014 = _api + "2014";
+let _2015 = _api + "2015";
+let _2016 = _api + "2016";
+let _2017 = _api + "2017";
+let _2018 = _api + "2018";
+let _2019 = _api + "2019";
+let _2020 = _api + "2020";
+let _2021 = _api + "2021";
+let _2022 = _api + "2022";
+let _2023 = _api + "2023";
 
 let options = { json: true };
 

@@ -2,96 +2,52 @@ var express = require("express");
 var request = require("request");
 var router = express.Router();
 
-// https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/aws
+let _api = "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/";
 
-let url_linkedin =
-  "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/linkedin";
-let url_oau = "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/oau";
-let url_others =
-  "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/others";
-let url_sudanese =
-  "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/sudanese";
-
-let url_hcl = "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/hcl";
-let url_percipio =
-  "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/percipio";
-let url_aws = "https://s9xv7ukid9.execute-api.us-east-1.amazonaws.com/prod/aws";
+let url_linkedin = _api + "linkedin";
+let url_oau = _api + "oau";
+let url_others = _api + "others";
+let url_sudanese = _api + "sudanese";
+let url_hcl = _api + "hcl";
+let url_percipio = _api + "percipio";
+let url_aws = _api + "aws";
 
 let all_urls =
   "https://xx6y4bkrsg.execute-api.us-east-1.amazonaws.com/prod/certs";
 
 let options = { json: true };
+// request(all_urls, options, (error, res, body) => {
+//   console.log(res.body);
+// });
 
 request(url_linkedin, options, (error, res, body) => {
-  if (error) {
-    return console.log(error);
-  }
-
-  if (!error && res.statusCode == 200) {
-    JSONdata_linkedin = res.body;
-  }
+  JSONdata_linkedin = res.body;
 });
 
 request(url_oau, options, (error, res, body) => {
-  if (error) {
-    return console.log(error);
-  }
-
-  if (!error && res.statusCode == 200) {
-    JSONdata_oau = res.body;
-  }
+  JSONdata_oau = res.body;
 });
 
 request(url_others, options, (error, res, body) => {
-  if (error) {
-    return console.log(error);
-  }
-
-  if (!error && res.statusCode == 200) {
-    JSONdata_other = res.body;
-  }
+  JSONdata_other = res.body;
 });
 
 request(url_sudanese, options, (error, res, body) => {
-  if (error) {
-    return console.log(error);
-  }
-
-  if (!error && res.statusCode == 200) {
-    JSONdata_sudanese = res.body;
-  }
+  JSONdata_sudanese = res.body;
 });
 
 request(url_hcl, options, (error, res, body) => {
-  if (error) {
-    return console.log(error);
-  }
-
-  if (!error && res.statusCode == 200) {
-    JSONdata_hcl = res.body;
-  }
+  JSONdata_hcl = res.body;
 });
 
 request(url_percipio, options, (error, res, body) => {
-  if (error) {
-    return console.log(error);
-  }
-
-  if (!error && res.statusCode == 200) {
-    JSONdata_percipio = res.body;
-  }
+  JSONdata_percipio = res.body;
 });
 
 request(url_aws, options, (error, res, body) => {
-  if (error) {
-    return console.log(error);
-  }
-
-  if (!error && res.statusCode == 200) {
-    JSONdata_aws_trainning = res.body[0];
-    JSONdata_aws_badges = res.body[1];
-    JSONdata_aws_certifications = res.body[2];
-  }
+  JSONdata_aws_trainning = res.body[0];
+  JSONdata_aws_badges = res.body[1];
+  JSONdata_aws_certifications = res.body[2];
 });
 
 // var AWS = require("aws-sdk");
