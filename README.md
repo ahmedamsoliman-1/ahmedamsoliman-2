@@ -4,7 +4,7 @@
 
 ### Connect with me:
 
-[<img align="left" alt="ahmedamsoliman | Instagram" width="22px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/web-3097086-2594910.png?f=webp&w=256" />][personal]
+[<img align="left" wid alt="ahmedamsoliman | Instagram" width="22px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/web-3097086-2594910.png?f=webp&w=256" />][personal]
 [<img align="left" alt="ahmedamsoliman | Instagram" width="22px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/big-data-1796902-1526167.png?f=webp&w=256" />][web_resume]
 [<img align="left" alt="ahmedamsoliman | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
 [<img align="left" alt="ahmedamsoliman | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
@@ -36,15 +36,15 @@
 
 [![Ahmed's GitHub stats](https://github-readme-stats.vercel.app/api?username=ahmedamsoliman-1&show_icons=true&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
 
-[website]: https://ahmedamsoliman.com
+[website]: https://ahmedamsoliman.herokuapp.com/
 [course]: http://vsCodeHero.com
 [twitter]: https://twitter.com/ahmedamsoliman
 [youtube]: https://youtube.com/ahmedamsoliman
 [instagram]: https://www.instagram.com/ahmed_ali_m_soliman/?hl=en
 [linkedin]: https://linkedin.com/in/ahmed-ali-m-soliman-01aa54120
-[webdevplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAJ0WbEsFA9W3I1W-g_BTsbt
-[jsplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALRJKu7wfXby3MKeflhTu6B
-[cssplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALSdvZuEh6gqQdmDoDIoqz4
-[personal]: http://ahmedalimsolimansdn-930971801.us-east-1.elb.amazonaws.com/
+[webdevplaylist]: http://webresume.s3-website-us-east-1.amazonaws.com/
+[jsplaylist]: http://webresume.s3-website-us-east-1.amazonaws.com/
+[cssplaylist]: http://webresume.s3-website-us-east-1.amazonaws.com/
+[personal]: https://ahmedamsoliman.herokuapp.com/
 [web_resume]: http://webresume.s3-website-us-east-1.amazonaws.com/
-[reactplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAK4TdffpxKY3QGyHCpxFcQ0
+[reactplaylist]: http://webresume.s3-website-us-east-1.amazonaws.com/
