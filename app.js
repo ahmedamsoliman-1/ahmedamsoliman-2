@@ -42,22 +42,29 @@ mongoose.connect(
 // fs.writeFileSync("public/temp/fellas.json", "{}", function (err) {
 //   if (err) throw err;
 // });
+// request(_oau_api, function (error, response, body) {
+//   fs.writeFileSync("public/data/oau.json", body, function (err) {
+//     if (err) throw err;
+//   });
+// });
 
-let _fellas_api =
-  "https://l34s1zxiga.execute-api.us-east-1.amazonaws.com/prod/fellas";
-let _oau_api = "https://nq8cx81jmj.execute-api.us-east-1.amazonaws.com/prod";
+// let _fellas_api =
+//   "https://l34s1zxiga.execute-api.us-east-1.amazonaws.com/prod/fellas";
+// // let _oau_api = "https://nq8cx81jmj.execute-api.us-east-1.amazonaws.com/prod";
 
-request(_fellas_api, function (error, response, body) {
-  fs.writeFileSync("public/data/fellas.json", body, function (err) {
-    if (err) throw err;
-  });
-});
+// request(_fellas_api, function (error, response, body) {
+//   fs.writeFileSync("public/data/fellas.json", body, function (err) {
+//     if (err) throw err;
+//   });
+// });
 
-request(_oau_api, function (error, response, body) {
-  fs.writeFileSync("public/data/oau.json", body, function (err) {
-    if (err) throw err;
-  });
-});
+// let _all_my_pics_lambd =
+//   "https://hle7tr2atq2gw5iamehbspa6em0yensb.lambda-url.us-east-1.on.aws/";
+// request(_all_my_pics_lambd, function (error, response, body) {
+//   fs.writeFileSync("public/data/my.json", body, function (err) {
+//     if (err) throw err;
+//   });
+// });
 
 // dynamodb.connect("mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority");
 app.use(bodyParser.urlencoded({ extended: true }));
