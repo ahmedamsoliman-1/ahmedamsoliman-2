@@ -17,7 +17,7 @@
                     <img src="<%= pic %>">
                     <div class="caption">
                         <!-- https://s3.amazonaws.com/aams-certs-and-badges-awscloud-001/aws-badges/AWS Architecting.png -->
-                        <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/")[1].replace(".png", "").replace("aws-badges/", "") %> </h4>
+                        <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/AWS/Badges/")[1].replace(".png", "").replace("aws-badges/", "") %> </h4>
                     </div>
                 </div>
             </div>
@@ -32,10 +32,8 @@
             <% aws_cert.forEach(function(pic) { %>
                 <div class="col-md-3 col-sm-6">
                     <div >
-                        <embed src="<%= pic %>" width="300px" height="200px" /> 
                         <div class="caption">
-                <!-- https://s3.amazonaws.com/aams-certs-and-badges-awscloud-001/aws-certifications/AWS Certified Solutions Architect - Associate certificate.pdf -->
-                            <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/")[1].replace(".pdf", "").replace("aws-certifications/", "") %> </h4>
+                            <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/AWS/Certifications/")[1].replace(".pdf", "").replace("aws-certifications/", "") %> </h4>
                         </div>
                         <p>
                             <a href="<%= pic %>" target="_blank" class="btn btn-danger">Open</a>
@@ -58,7 +56,7 @@
                 <div class="thumbnail">
                     <img src="<%= pic %>">
                     <div class="caption">
-                        <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/")[1].replace(".png", "") %> </h4>
+                        <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/Percipio/")[1].replace(".png", "") %> </h4>
                     </div>
                 </div>
             </div>
@@ -74,9 +72,8 @@
             <% linkedin.forEach(function(pic) { %>
                 <div class="col-md-3 col-sm-6">
                     <div class="thumbnail">
-                        <img src="<%= pic %>">
                         <div class="caption">
-                            <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/")[1].replace(".png", "").replace(".jpg", "") %> </h4>
+                            <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/Linkedin/")[1].replace(".png", "").replace(".jpg", "") %> </h4>
                         </div>
                         <p>
                             <a href="<%= pic %>" target="_blank" class="btn btn-info">Open</a>
@@ -98,7 +95,7 @@
                 <div class="thumbnail">
                     <img src="<%= pic %>">
                     <div class="caption">
-                        <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/")[1].replace(".jpg", "") %> </h4>
+                        <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/SDN/")[1].replace(".jpg", "").replace("_", " ").replace("_", " ").replace("_", " ").replace("_", " ") %> </h4>
                     </div>
                     <p>
                         <a href="<%= pic %>" target="_blank" class="btn btn-warning">Open</a>
@@ -118,7 +115,7 @@
                 <div class="thumbnail">
                     <img src="<%= pic %>">
                     <div class="caption">
-                        <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/")[1].replace(".jpg", "") %> </h4>
+                        <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/HCL/")[1].replace(".jpg", "").replace("_", " ").replace("_", " ").replace("_", " ").replace("__", " ").replace("_", " ").replace("_", " ").replace("_", " ") %> </h4>
                     </div>
                     <p>
                         <a href="<%= pic %>" target="_blank" class="btn btn-primary">Open</a>
@@ -140,9 +137,9 @@
         <% aws_train.forEach(function(pic) { %>
             <div class="col-md-3 col-sm-6">
                 <div >
-                    <embed src="<%= pic %>" width="300px" height="200px" /> 
                     <div class="caption">
-                        <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/")[1].replace(".pdf", "").replace("aws-trainning/", "") %> </h4>
+                        <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/AWS/Trainning/")[1].replace(".pdf", "").replace("aws-trainning/", "") %> </h4>
+                        
                     </div>
                     <p>
                         <a href="<%= pic %>" target="_blank" class="btn btn-danger">Open</a>
@@ -163,7 +160,7 @@
                 <div class="thumbnail">
                     <img src="<%= pic %>">
                     <div class="caption">
-                        <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/")[1].replace(".jpg", "") %> </h4>
+                        <h4> <%= pic.split("aams-certs-and-badges-awscloud-001/Others/")[1].replace(".jpg", "").replace("_", " ") %> </h4>
                     </div>
                     <p>
                         <a href="<%= pic %>" target="_blank" class="btn btn-danger">Open</a>

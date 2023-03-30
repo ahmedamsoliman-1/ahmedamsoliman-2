@@ -12,6 +12,8 @@ var express = require("express"),
   https = require("https"),
   Houndify = require("houndify"),
   cors = require("cors"),
+  fs = require("fs"),
+  request = require("request"),
   app = express(),
   // Picture = require("./models/picture"),
   // Comment = require("./models/comment"),
@@ -23,6 +25,7 @@ var express = require("express"),
   indexRoutes = require("./routes/index"),
   gallaryRoutes = require("./routes/gallary"),
   yearsRoutes = require("./routes/years"),
+  fellasRoutes = require("./routes/fellas"),
   linksRoutes = require("./routes/links"),
   gamesRoutes = require("./routes/games"),
   weatherRoutes = require("./routes/weather"),
@@ -35,6 +38,33 @@ var express = require("express"),
 mongoose.connect(
   "mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority"
 );
+
+// fs.writeFileSync("public/temp/fellas.json", "{}", function (err) {
+//   if (err) throw err;
+// });
+// request(_oau_api, function (error, response, body) {
+//   fs.writeFileSync("public/data/oau.json", body, function (err) {
+//     if (err) throw err;
+//   });
+// });
+
+// let _fellas_api =
+//   "https://l34s1zxiga.execute-api.us-east-1.amazonaws.com/prod/fellas";
+// // let _oau_api = "https://nq8cx81jmj.execute-api.us-east-1.amazonaws.com/prod";
+
+// request(_fellas_api, function (error, response, body) {
+//   fs.writeFileSync("public/data/fellas.json", body, function (err) {
+//     if (err) throw err;
+//   });
+// });
+
+// let _all_my_pics_lambd =
+//   "https://hle7tr2atq2gw5iamehbspa6em0yensb.lambda-url.us-east-1.on.aws/";
+// request(_all_my_pics_lambd, function (error, response, body) {
+//   fs.writeFileSync("public/data/my.json", body, function (err) {
+//     if (err) throw err;
+//   });
+// });
 
 // dynamodb.connect("mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority");
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -72,6 +102,7 @@ app.use(function (req, res, next) {
 app.use(indexRoutes);
 app.use(gallaryRoutes);
 app.use(yearsRoutes);
+app.use(fellasRoutes);
 app.use(linksRoutes);
 app.use(gamesRoutes);
 app.use(weatherRoutes);
