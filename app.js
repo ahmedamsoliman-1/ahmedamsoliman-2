@@ -39,9 +39,8 @@ mongoose.connect(
   "mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority"
 );
 
-// fs.writeFileSync("public/temp/fellas.json", "{}", function (err) {
-//   if (err) throw err;
-// });
+// let _oau_api =
+//   "https://qjd3lg547lhu4grihaxtnjpsda0sigzo.lambda-url.us-east-1.on.aws/";
 // request(_oau_api, function (error, response, body) {
 //   fs.writeFileSync("public/data/oau.json", body, function (err) {
 //     if (err) throw err;
@@ -49,8 +48,7 @@ mongoose.connect(
 // });
 
 // let _fellas_api =
-//   "https://l34s1zxiga.execute-api.us-east-1.amazonaws.com/prod/fellas";
-// // let _oau_api = "https://nq8cx81jmj.execute-api.us-east-1.amazonaws.com/prod";
+//   "https://uc3iywqpqshsfgvnwhlnjaa6gi0dauvr.lambda-url.us-east-1.on.aws/";
 
 // request(_fellas_api, function (error, response, body) {
 //   fs.writeFileSync("public/data/fellas.json", body, function (err) {

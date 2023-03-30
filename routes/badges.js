@@ -4,7 +4,8 @@ var router = express.Router();
 
 let options = { json: true };
 
-let new_url_2d = "https://ht0kffvdta.execute-api.us-east-1.amazonaws.com/prod";
+let new_url_2d =
+  "https://bjessle3ffrosciqy5jklv46yu0bjqar.lambda-url.us-east-1.on.aws/";
 
 router.get("/badges", function (req, res_o) {
   request(new_url_2d, options, (error, res, body) => {
