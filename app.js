@@ -39,10 +39,22 @@ mongoose.connect(
   "mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority"
 );
 
-let _api = "https://l34s1zxiga.execute-api.us-east-1.amazonaws.com/prod/fellas";
+// fs.writeFileSync("public/temp/fellas.json", "{}", function (err) {
+//   if (err) throw err;
+// });
 
-request(_api, function (error, response, body) {
-  fs.writeFile("fellas.json", body, function (err) {
+let _fellas_api =
+  "https://l34s1zxiga.execute-api.us-east-1.amazonaws.com/prod/fellas";
+let _oau_api = "https://nq8cx81jmj.execute-api.us-east-1.amazonaws.com/prod";
+
+request(_fellas_api, function (error, response, body) {
+  fs.writeFileSync("public/data/fellas.json", body, function (err) {
+    if (err) throw err;
+  });
+});
+
+request(_oau_api, function (error, response, body) {
+  fs.writeFileSync("public/data/oau.json", body, function (err) {
     if (err) throw err;
   });
 });

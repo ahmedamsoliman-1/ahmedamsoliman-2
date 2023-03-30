@@ -1,6 +1,7 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var router = express.Router();
+var fs = require("fs");
 var flash = require("connect-flash");
 var middleware = require("../middleware");
 
@@ -241,6 +242,12 @@ router.get("/gallary/all", function (req, res) {
 
 router.get("/gallary/fellas", function (req, res) {
   res.render("gallary/fellas");
+});
+
+let oautoJSONData = JSON.parse(fs.readFileSync("public/data/oau.json", "utf8"));
+
+router.get("/gallary/oau", function (req, res) {
+  res.render("oau", { all: oautoJSONData["oau"], y: "_oau" });
 });
 
 module.exports = router;

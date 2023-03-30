@@ -14,7 +14,7 @@ var router = express.Router();
 //   });
 // });
 
-let toJSONData = JSON.parse(fs.readFileSync("fellas.json", "utf8"));
+let toJSONData = JSON.parse(fs.readFileSync("public/data/fellas.json", "utf8"));
 
 let _000 = toJSONData["000"];
 let _2010 = toJSONData["2010"];
