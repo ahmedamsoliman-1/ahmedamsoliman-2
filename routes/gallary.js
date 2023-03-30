@@ -239,4 +239,10 @@ router.get("/gallary/all", function (req, res) {
   res.render("gallary/all");
 });
 
+router.get("/gallary/fellas", function (req, res) {
+  res.render("gallary/fellas");
+});
+
 module.exports = router;
+
+// https://l34s1zxiga.execute-api.us-east-1.amazonaws.com/prod/fellas

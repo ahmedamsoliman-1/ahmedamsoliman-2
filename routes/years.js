@@ -2,7 +2,7 @@ var express = require("express");
 var request = require("request");
 var router = express.Router();
 
-let _y = "https://s3.amazonaws.com/ahmedamsoliman-replica/IAM/Years/";
+// let _y = "https://s3.amazonaws.com/ahmedamsoliman-replica/IAM/Years/";
 
 let _api = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/";
 
@@ -22,6 +22,7 @@ let _2020 = _api + "2020";
 let _2021 = _api + "2021";
 let _2022 = _api + "2022";
 let _2023 = _api + "2023";
+let _instagram = _api + "instagram";
 
 let _year_page = "0ndated";
 
@@ -138,5 +139,15 @@ router.get("/gallary/all/" + Object.keys({ _2023 })[0], function (req, res) {
   });
   res.render(_year_page, { all: all, y: Object.keys({ _2023 })[0] });
 });
+
+router.get(
+  "/gallary/all/" + Object.keys({ _instagram })[0],
+  function (req, res) {
+    request(_instagram, options, (error, res, body) => {
+      all = res.body;
+    });
+    res.render(_year_page, { all: all, y: Object.keys({ _instagram })[0] });
+  }
+);
 
 module.exports = router;
