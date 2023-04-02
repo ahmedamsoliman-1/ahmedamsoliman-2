@@ -56,6 +56,7 @@ mongoose.connect(
 //   });
 // });
 
+// function: https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/years_all?tab=code
 // let _all_my_pics_lambd =
 //   "https://hle7tr2atq2gw5iamehbspa6em0yensb.lambda-url.us-east-1.on.aws/";
 // request(_all_my_pics_lambd, function (error, response, body) {
