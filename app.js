@@ -27,6 +27,7 @@ var express = require("express"),
   yearsRoutes = require("./routes/years"),
   fellasRoutes = require("./routes/fellas"),
   linksRoutes = require("./routes/links"),
+  videosRoutes = require("./routes/videos"),
   gamesRoutes = require("./routes/games"),
   weatherRoutes = require("./routes/weather"),
   digitalBadgesRoutes = require("./routes/badges"),
@@ -39,8 +40,9 @@ mongoose.connect(
   "mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority"
 );
 
-// let _oau_api =
-//   "https://qjd3lg547lhu4grihaxtnjpsda0sigzo.lambda-url.us-east-1.on.aws/";
+// fs.writeFileSync("public/temp/fellas.json", "{}", function (err) {
+//   if (err) throw err;
+// });
 // request(_oau_api, function (error, response, body) {
 //   fs.writeFileSync("public/data/oau.json", body, function (err) {
 //     if (err) throw err;
@@ -48,7 +50,8 @@ mongoose.connect(
 // });
 
 // let _fellas_api =
-//   "https://uc3iywqpqshsfgvnwhlnjaa6gi0dauvr.lambda-url.us-east-1.on.aws/";
+//   "https://l34s1zxiga.execute-api.us-east-1.amazonaws.com/prod/fellas";
+// // let _oau_api = "https://nq8cx81jmj.execute-api.us-east-1.amazonaws.com/prod";
 
 // request(_fellas_api, function (error, response, body) {
 //   fs.writeFileSync("public/data/fellas.json", body, function (err) {
@@ -56,11 +59,18 @@ mongoose.connect(
 //   });
 // });
 
-// function: https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/years_all?tab=code
 // let _all_my_pics_lambd =
 //   "https://hle7tr2atq2gw5iamehbspa6em0yensb.lambda-url.us-east-1.on.aws/";
 // request(_all_my_pics_lambd, function (error, response, body) {
 //   fs.writeFileSync("public/data/my.json", body, function (err) {
+//     if (err) throw err;
+//   });
+// });
+
+// let _all_videos_lambda_url =
+//   "https://y7hwirf6k6p7wvgckh44s4cuqy0tnakl.lambda-url.us-east-1.on.aws/";
+// request(_all_videos_lambda_url, function (error, response, body) {
+//   fs.writeFileSync("public/data/videos.json", body, function (err) {
 //     if (err) throw err;
 //   });
 // });
@@ -105,6 +115,7 @@ app.use(fellasRoutes);
 app.use(linksRoutes);
 app.use(gamesRoutes);
 app.use(weatherRoutes);
+app.use(videosRoutes);
 app.use(appsRoutes);
 app.use(digitalBadgesRoutes);
 app.use(appsRoutes_HarryPotter);
