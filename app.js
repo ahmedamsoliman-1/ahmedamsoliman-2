@@ -28,6 +28,7 @@ var express = require("express"),
   fellasRoutes = require("./routes/fellas"),
   linksRoutes = require("./routes/links"),
   videosRoutes = require("./routes/videos"),
+  mangeRoutes = require("./routes/mange"),
   gamesRoutes = require("./routes/games"),
   weatherRoutes = require("./routes/weather"),
   digitalBadgesRoutes = require("./routes/badges"),
@@ -116,6 +117,7 @@ app.use(linksRoutes);
 app.use(gamesRoutes);
 app.use(weatherRoutes);
 app.use(videosRoutes);
+app.use(mangeRoutes);
 app.use(appsRoutes);
 app.use(digitalBadgesRoutes);
 app.use(appsRoutes_HarryPotter);
