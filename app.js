@@ -27,6 +27,7 @@ var express = require("express"),
   yearsRoutes = require("./routes/years"),
   fellasRoutes = require("./routes/fellas"),
   linksRoutes = require("./routes/links"),
+  videosRoutes = require("./routes/videos"),
   gamesRoutes = require("./routes/games"),
   weatherRoutes = require("./routes/weather"),
   digitalBadgesRoutes = require("./routes/badges"),
@@ -62,6 +63,14 @@ mongoose.connect(
 //   "https://hle7tr2atq2gw5iamehbspa6em0yensb.lambda-url.us-east-1.on.aws/";
 // request(_all_my_pics_lambd, function (error, response, body) {
 //   fs.writeFileSync("public/data/my.json", body, function (err) {
+//     if (err) throw err;
+//   });
+// });
+
+// let _all_videos_lambda_url =
+//   "https://y7hwirf6k6p7wvgckh44s4cuqy0tnakl.lambda-url.us-east-1.on.aws/";
+// request(_all_videos_lambda_url, function (error, response, body) {
+//   fs.writeFileSync("public/data/videos.json", body, function (err) {
 //     if (err) throw err;
 //   });
 // });
@@ -106,6 +115,7 @@ app.use(fellasRoutes);
 app.use(linksRoutes);
 app.use(gamesRoutes);
 app.use(weatherRoutes);
+app.use(videosRoutes);
 app.use(appsRoutes);
 app.use(digitalBadgesRoutes);
 app.use(appsRoutes_HarryPotter);
