@@ -36,9 +36,7 @@ var express = require("express"),
   linkedinRoutes = require("./routes/linkedin"),
   User = require("./models/user");
 
-mongoose.connect(
-  "mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority"
-);
+mongoose.connect(process.env.MONGO_URL);
 
 // fs.writeFileSync("public/temp/fellas.json", "{}", function (err) {
 //   if (err) throw err;
@@ -121,21 +119,12 @@ app.use(digitalBadgesRoutes);
 app.use(appsRoutes_HarryPotter);
 app.use(linkedinRoutes);
 
-// =========================================================
-// Houndify configurations
-//parse arguments
-var argv = require("minimist")(process.argv.slice(2));
-
-//config file
-var configFile = argv.config || ".config";
-var config = require(path.join(__dirname, configFile));
-
-// //authenticates requests
+//authenticates Houndify requests
 app.get(
   "/houndifyAuth",
   Houndify.HoundifyExpress.createAuthenticationHandler({
-    clientId: config.clientId,
-    clientKey: config.clientKey,
+    clientId: process.env.HOUNDIFY_CLIENT_ID,
+    clientKey: process.env.HOUNDIFY_CLIENT_KEY,
   })
 );
 
