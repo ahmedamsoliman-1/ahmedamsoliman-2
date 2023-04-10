@@ -12,9 +12,13 @@ let _ejs_page_vid = "videos";
 
 let _videos = allToJSONData["video"];
 
-router.get("/gallary/videos", middleware.isLoggedIn, function (req, res) {
-  // res.send(_videos);
-  res.render(_ejs_page_vid, { all: _videos, y: Object.keys({ _videos })[0] });
-});
+router.get(
+  "/gallary/videos",
+  middleware.isLoggedInAsVideosUser,
+  function (req, res) {
+    // res.send(_videos);
+    res.render(_ejs_page_vid, { all: _videos, y: Object.keys({ _videos })[0] });
+  }
+);
 
 module.exports = router;
