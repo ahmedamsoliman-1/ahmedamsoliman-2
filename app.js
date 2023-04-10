@@ -1,4 +1,5 @@
 var express = require("express"),
+  session = require("express-session"),
   mongoose = require("mongoose"),
   dynamodb = require("dynamodb"),
   hbs = require("hbs"),
@@ -93,6 +94,14 @@ app.use(
   })
 );
 
+app.use(
+  session({
+    secret: "flashblog",
+    saveUninitialized: true,
+    resave: true,
+  })
+);
+
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
@@ -103,8 +112,10 @@ app.use(function (req, res, next) {
   res.locals.currentUser = req.user;
   res.locals.error = req.flash("error");
   res.locals.success = req.flash("success");
+  res.locals.message = req.flash();
   next();
 });
+
 // =========================================================
 
 app.use(indexRoutes);
