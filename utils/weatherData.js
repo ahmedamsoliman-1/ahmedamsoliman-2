@@ -1,13 +1,13 @@
 const request = require("request");
 
-const constansts = {
-  openWeatherMap: {
-    BASE_URL: "https://api.openweathermap.org/data/2.5/weather?q=",
-    SECRET_KEY: "24232292845ec6e7696cd1e3595a46aa",
-  },
-};
-
 const weatherData = (address, callback) => {
+  const constansts = {
+    openWeatherMap: {
+      BASE_URL: "https://api.openweathermap.org/data/2.5/weather?q=",
+      SECRET_KEY: process.env.WEATHER_API_SECRET_KEY,
+    },
+  };
+
   const url =
     constansts.openWeatherMap.BASE_URL +
     encodeURIComponent(address) +

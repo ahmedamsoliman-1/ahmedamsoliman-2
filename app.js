@@ -88,17 +88,9 @@ app.use(cors());
 // Passport configurations
 app.use(
   require("express-session")({
-    secret: "Secret phrase",
+    secret: process.env.SECRET_PHRASE,
     resave: false,
     saveUninitialized: false,
-  })
-);
-
-app.use(
-  session({
-    secret: "flashblog",
-    saveUninitialized: true,
-    resave: true,
   })
 );
 
@@ -148,6 +140,8 @@ app.post(
   Houndify.HoundifyExpress.createTextProxyHandler()
 );
 // =========================================================
+
+// console.log(process.env.WEATHER_API_SECRET_KEY);
 
 app.listen(port, process.env.IP, function () {
   console.log(
