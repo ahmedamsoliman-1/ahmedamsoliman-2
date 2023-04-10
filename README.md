@@ -2,17 +2,11 @@
 
 [![Twitter](https://img.shields.io/twitter/follow/ahmedamsoliman?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/ahmedamsoliman)
 
-### Connect with me:
-
-[<img align="left" alt="ahmedamsoliman | Instagram" width="22px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/web-3097086-2594910.png?f=webp&w=256" />][personal]
-[<img align="left" alt="ahmedamsoliman | Instagram" width="22px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/big-data-1796902-1526167.png?f=webp&w=256" />][web_resume]
-[<img align="left" alt="ahmedamsoliman | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
-[<img align="left" alt="ahmedamsoliman | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="ahmedamsoliman | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
-
+<br />
+<br />
 <br />
 
-### Languages and Tools:
+## Languages and Tools
 
 [<img align="left" alt="Visual Studio Code" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />][webdevplaylist]
 [<img align="left" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />][webdevplaylist]
@@ -32,19 +26,21 @@
 <br />
 <br />
 
----
-
 [![Ahmed's GitHub stats](https://github-readme-stats.vercel.app/api?username=ahmedamsoliman-1&show_icons=true&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
 
-[website]: https://ahmedamsoliman.com
-[course]: http://vsCodeHero.com
-[twitter]: https://twitter.com/ahmedamsoliman
-[youtube]: https://youtube.com/ahmedamsoliman
-[instagram]: https://www.instagram.com/ahmed_ali_m_soliman/?hl=en
-[linkedin]: https://linkedin.com/in/ahmed-ali-m-soliman-01aa54120
-[webdevplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAJ0WbEsFA9W3I1W-g_BTsbt
-[jsplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALRJKu7wfXby3MKeflhTu6B
-[cssplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALSdvZuEh6gqQdmDoDIoqz4
-[personal]: http://ahmedalimsolimansdn-930971801.us-east-1.elb.amazonaws.com/
-[web_resume]: http://webresume.s3-website-us-east-1.amazonaws.com/
-[reactplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAK4TdffpxKY3QGyHCpxFcQ0
+<br />
+<br />
+<br />
+
+## 🔗 Connect with me
+
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ahmedamsoliman.herokuapp.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmedalimsoliman/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/ahmedamsoliman)
+[![facebook](https://img.shields.io/badge/facebook-1DA1F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/ahmedalimsoliman)
+[![instagram](https://img.shields.io/badge/instagram-1DA1F2?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ahmed_ali_m_soliman)
+[![github](https://img.shields.io/badge/github-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ahmedamsoliman-1)
+[![gitlab](https://img.shields.io/badge/gitlab-1DA1F2?style=for-the-badge&logo=gitlab&logoColor=white)](https://gitlab.com/ahmedamsoliman-1)
+[![credly](https://img.shields.io/badge/credly-1DA1F2?style=for-the-badge&logo=credly&logoColor=white)](https://www.credly.com/users/ahmed-ali-mohamed-soliman/badges)
+[![skillsoft](https://img.shields.io/badge/skillsoft-1DA1F2?style=for-the-badge&logo=skillsoft&logoColor=white)](https://skillsoft.digitalbadges.skillsoft.com/profile/ahmedsoliman614032/wallet)
+[![whatsapp](https://img.shields.io/badge/whatsapp-1DA1F2?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.link/2219fj)
