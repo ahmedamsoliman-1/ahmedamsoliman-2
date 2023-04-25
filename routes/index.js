@@ -10,7 +10,7 @@ router.get("/", function (req, res) {
 
 router.get("/index", function (req, res) {
   // res.render("index");
-  res.redirect("http://webresume.s3-website-us-east-1.amazonaws.com/");
+  res.redirect("https://resume.ahmedalimsoliman.click");
 });
 
 // Show register form
