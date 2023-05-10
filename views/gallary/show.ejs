@@ -9,16 +9,16 @@
           <h4><a><%= pic.name %></a></h4>
           <p><%= pic.description %></p>
 
-          <a
-            class="btn btn-large btn-warning"
-            href="/gallary/local/<%= pic._id %>/edit"
-            >Edit</a
-          >
           <form
             id="delete-form"
             action="/gallary/local/<%= pic._id %>?_method=DELETE"
             method="POST"
           >
+            <a
+              class="btn btn-large btn-warning"
+              href="/gallary/local/<%= pic._id %>/edit"
+              >Edit</a
+            >
             <button class="btn btn-large btn-danger">Delete</button>
           </form>
         </div>

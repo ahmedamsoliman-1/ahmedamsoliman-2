@@ -29,15 +29,19 @@ router.get("/profile/:id", function (req, res) {
   });
 });
 
-router.delete("/mange/profile/:id", function (req, res) {
-  User.findByIdAndDelete(req.params.id, function (err) {
-    if (err) {
-      res.redirect("/mange");
-    } else {
-      res.redirect("/mange");
-    }
-  });
-});
+router.delete(
+  "/mange/profile/:id",
+  middleware.isLoggedInAsAdmin,
+  function (req, res) {
+    User.findByIdAndDelete(req.params.id, function (err) {
+      if (err) {
+        res.redirect("/mange");
+      } else {
+        res.redirect("/mange");
+      }
+    });
+  }
+);
 
 // Edit User
 router.get("/mange/profile/:id/edituser", function (req, res) {

@@ -8,7 +8,12 @@
           <h4><a><%= fuser.name %></a></h4>
           <h2><strong><%= fuser.fullname %></strong></h2>
           <br />
-          <img height="400" width="400" src="<%= fuser.image %>" />
+          <img
+            class="center"
+            height="400"
+            width="400"
+            src="<%= fuser.image %>"
+          />
           <br />
           <p>username: <strong><%= fuser.username %></strong></p>
           <p>age: <strong><%= fuser.age %></strong></p>
@@ -19,13 +24,12 @@
             method="POST"
           >
             <button class="btn btn-large btn-danger">Delete</button>
+            <a
+              href="/mange/profile/<%= fuser._id %>/edituser"
+              class="btn btn-large btn-warning"
+              >Edit</a
+            >
           </form>
-
-          <a
-            href="/mange/profile/<%= fuser._id %>/edituser"
-            class="btn btn-large btn-warning"
-            >Edit</a
-          >
         </div>
       </div>
     </div>
