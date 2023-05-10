@@ -3,8 +3,10 @@ var passportLocalMongoose = require("passport-local-mongoose");
 
 // Scema setup
 var userSchema = new mongoose.Schema({
-  fname: String,
+  fullname: String,
   username: String,
+  age: String,
+  image: String,
   password: String,
 });
 

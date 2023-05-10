@@ -54,9 +54,20 @@ middlewareJbj.isLoggedIn = function (req, res, next) {
   }
 };
 
-middlewareJbj.isLoggedInAsVideosUser = function (req, res, next) {
-  if (req.isAuthenticated() && req.user.username === "videosUser") {
+middlewareJbj.isLoggedInAsAdmin = function (req, res, next) {
+  if (req.isAuthenticated() && req.user.username === "Admin") {
     return next();
+  } else {
+    req.flash("error", "only Admins can do that!");
+    res.redirect("/login");
+  }
+};
+
+middlewareJbj.isLoggedInAsVideosUser = function (req, res, next) {
+  if (req.isAuthenticated()) {
+    if (req.user.username === "ahmed" || req.user.username === "Admin") {
+      return next();
+    }
   } else {
     req.flash("error", "only videosUser can do that!");
     res.redirect("/login");

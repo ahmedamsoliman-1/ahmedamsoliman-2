@@ -6,9 +6,12 @@
       <div class="thumbnail">
         <div class="caption-full">
           <h4><a><%= fuser.name %></a></h4>
-          <h2>Full Name: <strong><%= fuser.fname %></strong></h2>
-          <p>UserID: <strong><%= fuser._id %></strong></p>
-          <p>User Name: <strong><%= fuser.username %></strong></p>
+          <h2><strong><%= fuser.fullname %></strong></h2>
+          <br />
+          <img height="400" width="400" src="<%= fuser.image %>" />
+          <br />
+          <p>username: <strong><%= fuser.username %></strong></p>
+          <p>age: <strong><%= fuser.age %></strong></p>
 
           <form
             id="delete-form"
@@ -17,6 +20,12 @@
           >
             <button class="btn btn-large btn-danger">Delete</button>
           </form>
+
+          <a
+            href="/mange/profile/<%= fuser._id %>/edituser"
+            class="btn btn-large btn-warning"
+            >Edit</a
+          >
         </div>
       </div>
     </div>

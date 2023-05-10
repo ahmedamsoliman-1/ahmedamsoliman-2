@@ -9,12 +9,11 @@
   <div class="col-md-3 col-sm-6">
     <div class="thumbnail">
       <div class="caption">
-        <h4><%= _u.username %></h4>
+        <h4><%= _u.fullname %></h4>
+        <img height="200" width="200" src="<%= _u.image %>" />
       </div>
       <p>
-        <a href="/gallary/profile/<%= _u._id %>" class="btn btn-primary"
-          >Profile</a
-        >
+        <a href="/profile/<%= _u._id %>" class="btn btn-primary">Profile</a>
       </p>
     </div>
   </div>

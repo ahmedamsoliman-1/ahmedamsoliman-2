@@ -23,8 +23,10 @@ router.post("/register", function (req, res) {
   // var fUser = new User({ fname: req.body.fname });
   // var newUserName = new User({ username: req.body.username });
   var newUser = new User({
-    fname: req.body.fname,
+    fullname: req.body.fullname,
     username: req.body.username,
+    age: req.body.age,
+    image: req.body.image,
   });
   User.register(newUser, req.body.password, function (err, user) {
     if (err) {
@@ -32,9 +34,9 @@ router.post("/register", function (req, res) {
       return res.render("register");
     }
     passport.authenticate("local")(req, res, function () {
-      console.log("success, Welcome to Ahmed's site " + user.fname);
+      console.log("success, Welcome to Ahmed's site " + user.username);
       req.flash("success", "Welcome to Ahmed's site " + user.username);
-      res.redirect("/gallary");
+      res.redirect("/profile/" + user._id);
     });
   });
 });
