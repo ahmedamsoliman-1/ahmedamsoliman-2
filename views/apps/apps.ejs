@@ -6,8 +6,12 @@
 </header>
 
 <div class="container">
+    <div>
+        <h1>External</h1>
+    </div>
+
     <div class="row text-center" style="display: flex; flex-wrap: wrap;">
-        <% apps.forEach(function(app) { %>
+        <% apps_e.forEach(function(app) { %>
             <div class="col-md-3 col-sm-6">
                 <div class="thumbnail">
                     <img class="imgger" sizes="" src="<%= app.image %>">
@@ -16,6 +20,26 @@
                     </div>
                     <p>
                         <a target="_blank" href="<%= app.link %>" class="btn btn-primary">Open</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+
+    <div>
+        <h1>Internal</h1>
+    </div>
+    
+    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+        <% apps_i.forEach(function(app) { %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img class="imgger" sizes="" src="<%= app.image %>">
+                    <div class="caption">
+                        <h4> <%= app.title %> </h4>
+                    </div>
+                    <p>
+                        <a href="<%= app.link %>" class="btn btn-primary">Open</a>
                     </p>
                 </div>
             </div>

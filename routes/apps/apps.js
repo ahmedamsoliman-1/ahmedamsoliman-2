@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-apps = [
+apps_e = [
   {
     title: "MyLinkTree",
     image: "../../image/apps/avatar2.jpg",
@@ -15,27 +15,12 @@ apps = [
   {
     title: "Printable CV",
     image: "../../image/apps/cv.jpg",
-    link: "https://cv.ahmedalimsoliman.click",
+    link: "https://cv.dev.ahmedalimsoliman.click",
   },
   {
     title: "uTube",
     image: "../../image/apps/youtube.jpg",
     link: "https://utube.ahmedalimsoliman.click",
-  },
-  {
-    title: "Ask Hound",
-    image: "../../image/apps/hound.jpg",
-    link: "/apps/houndify",
-  },
-  {
-    title: "ToDo",
-    image: "../../image/apps/2do.jpg",
-    link: "/apps/todo",
-  },
-  {
-    title: "Dog Picture Generator",
-    image: "../../image/apps/dog.jpg",
-    link: "/apps/dogsrand",
   },
   {
     title: "Blog",
@@ -58,14 +43,31 @@ apps = [
     link: "https://gallery.ahmedalimsoliman.click",
   },
   {
-    title: "Calendar",
-    image: "../../image/apps/calendar.jpg",
-    link: "/apps/calendar",
-  },
-  {
     title: "RLinktree",
     image: "../../image/apps/react.jpg",
     link: "https://react.ahmedalimsoliman.click",
+  },
+];
+apps_i = [
+  {
+    title: "Ask Hound",
+    image: "../../image/apps/hound.jpg",
+    link: "/apps/houndify",
+  },
+  {
+    title: "ToDo",
+    image: "../../image/apps/2do.jpg",
+    link: "/apps/todo",
+  },
+  {
+    title: "Dog Picture Generator",
+    image: "../../image/apps/dog.jpg",
+    link: "/apps/dogsrand",
+  },
+  {
+    title: "Calendar",
+    image: "../../image/apps/calendar.jpg",
+    link: "/apps/calendar",
   },
   {
     title: "Calculator",
@@ -80,7 +82,7 @@ apps = [
 ];
 
 router.get("/apps", function (req, res) {
-  res.render("apps/apps", { apps: apps });
+  res.render("apps/apps", { apps_e: apps_e, apps_i: apps_i });
 });
 
 router.get("/apps/calculator", function (req, res) {
