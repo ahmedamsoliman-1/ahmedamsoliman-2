@@ -24,12 +24,12 @@ apps = [
   },
   {
     title: "Ask Hound",
-    image: "../../image/apps/houndify.jpg",
+    image: "../../image/apps/hound.jpg",
     link: "/apps/houndify",
   },
   {
     title: "ToDo",
-    image: "../../image/apps/weathe.jpg",
+    image: "../../image/apps/2do.jpg",
     link: "/apps/todo",
   },
   {
@@ -69,12 +69,12 @@ apps = [
   },
   {
     title: "Calculator",
-    image: "../../image/apps/calculator.jpg",
+    image: "../../image/apps/cal.jpg",
     link: "/apps/calculator",
   },
   {
     title: "Weather",
-    image: "../../image/apps/weathe.jpg",
+    image: "../../image/apps/wea.jpg",
     link: "/weather",
   },
 ];
