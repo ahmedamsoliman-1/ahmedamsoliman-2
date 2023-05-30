@@ -3,11 +3,12 @@ var request = require("request");
 var fs = require("fs");
 var router = express.Router();
 
-// let _y = "https://s3.amazonaws.com/ahmedamsoliman-replica/IAM/Years/";
-
-let _api = "https://n03534ugof.execute-api.us-east-1.amazonaws.com/prod/";
-
-let allToJSONData = JSON.parse(fs.readFileSync("public/data/my.json", "utf8"));
+let allToJSONData = JSON.parse(
+  fs.readFileSync(
+    "public/data/aams-lambda-to-list-urls-years-1-LambdaFunction-iH209ueqspYb_response.json",
+    "utf8"
+  )
+);
 
 // console.log(allToJSONData["2015"]);
 

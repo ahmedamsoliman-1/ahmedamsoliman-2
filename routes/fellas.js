@@ -2,19 +2,12 @@ var express = require("express");
 var request = require("request");
 const fs = require("fs");
 var router = express.Router();
-
-// https://l34s1zxiga.execute-api.us-east-1.amazonaws.com/prod/fellas
-
-// let _api = "https://l34s1zxiga.execute-api.us-east-1.amazonaws.com/prod/fellas";
-
-// request(_api, function (error, response, body) {
-//   // console.log(body);
-//   fs.writeFile("fellas.json", body, function (err) {
-//     if (err) throw err;
-//   });
-// });
-
-let toJSONData = JSON.parse(fs.readFileSync("public/data/fellas.json", "utf8"));
+let toJSONData = JSON.parse(
+  fs.readFileSync(
+    "public/data/aams-lambda-to-list-urls-fellas-1-LambdaFunction-cUjkUIjbF8uG_response.json",
+    "utf8"
+  )
+);
 
 let _000 = toJSONData["000"];
 let _2010 = toJSONData["2010"];

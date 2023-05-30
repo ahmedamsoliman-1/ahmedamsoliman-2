@@ -5,7 +5,10 @@ var router = express.Router();
 var middleware = require("../middleware");
 
 let allToJSONData = JSON.parse(
-  fs.readFileSync("public/data/videos.json", "utf8")
+  fs.readFileSync(
+    "public/data/aams-lambda-to-list-urls-videos-1-LambdaFunction-FFIK5io32jS9_response.json",
+    "utf8"
+  )
 );
 
 let _ejs_page_vid = "videos";
