@@ -38,7 +38,11 @@ aws cloudformation wait \
     --profile $profile \
     --stack-name $stack
 
+# Remove zipped file
+rm $destination
 
+
+# update the stack
 
 # aws cloudformation update-stack \
 #     --stack-name $stack  \

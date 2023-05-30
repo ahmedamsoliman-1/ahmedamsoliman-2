@@ -40,6 +40,12 @@ aws cloudformation wait \
 
 
 
+# Remove zipped file
+rm $destination
+
+
+# update the stack
+
 # aws cloudformation update-stack \
 #     --stack-name $stack  \
 #     --capabilities CAPABILITY_IAM \
