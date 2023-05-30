@@ -6,7 +6,9 @@
 - This S3 bucket will host the compressed lambda function for:
   - Videos URL
   - Fellas URL
-  - My URLs
+  - My Years URLs
+  - Certs URLs
+  - OAU URLs
 
 ## Zipper.py script
 
@@ -19,5 +21,3 @@
   - delply_lambda.sh: Script to deploy the lambda function using cloudformation template
   - lambda.yml: The cloud formation template.
   - lambda_handler.py: The lambda function implementation
-
-### videos_url
