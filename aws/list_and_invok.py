@@ -3,36 +3,26 @@ import json
 
 profile="aams-1-us-east-1"
 
-# Create a Boto3 client for AWS Lambda
 session = boto3.Session(profile_name=profile)
 lambda_client = session.client('lambda')
 
-
-# Retrieve a list of Lambda functions
 response = lambda_client.list_functions()
 
-# Retrieve and print the function URL for each Lambda function
 for function in response['Functions']:
 
     function_name = function['FunctionName']
     function_description = function['Description']
     
-    # Retrieve the function URL configuration
     function_url_configs = lambda_client.list_function_url_configs(FunctionName=function_name)
     
-
-    # function_description = function_url_configs['FunctionUrlConfigs'][0]['Description']
 
     if function_description == "Lambda function returns URLs from S3 Bucket":
 
         print(f"Function Name: {function_name}")
-        # Extract the function URL from the configuration
+
         function_url = function_url_configs['FunctionUrlConfigs'][0]['FunctionUrl']
     
-    
-    
         print(f"Function URL: {function_url}")
-
 
         # Invoke the Lambda function
         invoke_response = lambda_client.invoke(
@@ -47,7 +37,6 @@ for function in response['Functions']:
         filename = f"../public/data/{function_name}_response.json"
         with open(filename, 'w') as file:
             json.dump(json.loads(payload), file, indent=4)
-            # file.write(payload)
         
         print(f"Invoked function: {function_name}")
         print(f"Response written to file: {filename}")
