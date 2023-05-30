@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: This CloudFormation template creates Lambda function to URLs
+Description: This CloudFormation template creates Lambda function to URLs from S3 Bucket
 
 Parameters:
   S3BucketName:
@@ -64,7 +64,7 @@ Resources:
       Timeout: 500
       Handler: lambda_handler.lambda_handler
       Role: !GetAtt LambdaFunctionRole.Arn
-      Description: Lambda function return URLs from S3 Bucket
+      Description: Lambda function returns URLs from S3 Bucket
       Code:
         S3Bucket: !Ref S3BucketName
         S3Key: !Ref S3KeyName

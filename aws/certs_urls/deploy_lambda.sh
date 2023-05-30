@@ -76,4 +76,4 @@ aws cloudformation wait \
 #   --profile $profile \
 #   $(tty) > /dev/null
 
-sleep 6s
+sleep 2s
