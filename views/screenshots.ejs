@@ -1,0 +1,38 @@
+<%- include ('partials/header') %>
+
+<div class="container">
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Weclome To My gallary!</h1>
+      <a>my ALL Screenshots throuh <strong><%= y %></strong></a>
+      <div><a>Number of image: <%= _all.length %></a></div>
+    </div>
+  </header>
+</div>
+
+<header class="jumbotron">
+  <div class="container">
+    <h2><%= y %></h2>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row text-center" style="display: flex; flex-wrap: wrap">
+    <% __all.forEach(function(pic, index) { var _pic = _all[index]; %>
+    <div class="col-md-3 col-sm-6">
+      <div class="thumbnail">
+        <img src="<%= pic %>" />
+        <div class="caption">
+          <h4>
+            <%=
+            _pic.split('/').pop().split('.')[0].split('_').slice(1).join('_') %>
+          </h4>
+          <a target="_blank" href="<%= _pic %>" class="btn btn-sm btn-info"
+            >Open</a
+          >
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+</div>

@@ -98,6 +98,10 @@ router.get("/gallary/fellas", function (req, res) {
   res.render("gallary/fellas");
 });
 
+router.get("/gallary/screenshots", function (req, res) {
+  res.render("gallary/screenshots");
+});
+
 let oautoJSONData = JSON.parse(
   fs.readFileSync(
     "public/data/aams-lambda-to-list-urls-oau-1-LambdaFunction-ZdKT4MNaVKYo_response.json",
