@@ -1,12 +1,14 @@
 #!/bin/bash
 
 # Variables
-stack='aams-lambda-to-list-urls-fellas-1'
-key="fellas_urls"
+stack='aams-lambda-to-list-urls-screenshots-thumb-1'
+key="screenshots-uthumb-rls"
 
 # Const
-profile="aams-1-us-east-1"
-bucket='zipped.ahmedalimsoliman.click'
+uae_profile="route53-me-central-1"
+profile="route53-us-east-1"
+
+bucket='us.zipped.ahmedalimsoliman.click'
 template='lambda.yml'
 key2="lambda_handler.zip"
 source="lambda_handler.py"
