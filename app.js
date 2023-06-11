@@ -40,6 +40,16 @@ var express = require("express"),
 
 mongoose.connect(process.env.MONGO_URL);
 
+screenshots_lambda_api = process.env.screenshots_lambda_api;
+screenshots_thumb_lambda_api = process.env.screenshots_thumb_lambda_api;
+
+// request(screenshots_lambda_api, function (error, response, body) {
+//   fs.writeFileSync("public/data/screenshots.json", body);
+// });
+// request(screenshots_thumb_lambda_api, function (error, response, body) {
+//   fs.writeFileSync("public/data/screenshots-thumb.json", body);
+// });
+
 // dynamodb.connect("mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
