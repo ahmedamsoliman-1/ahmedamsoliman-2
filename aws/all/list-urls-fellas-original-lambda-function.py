@@ -108,7 +108,7 @@ def lambda_handler(event, context):
 
 if socket.gethostname() == "AAMSThinkPadX1":
     res = lambda_handler(None, None)
-    with open("urls.txt", "w") as f:
+    with open("urls.json", "w") as f:
         for i in res:
             f.write(i + "\n")
             for j in res[i]:
