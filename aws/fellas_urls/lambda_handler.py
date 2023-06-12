@@ -2,13 +2,28 @@ import boto3
 import socket
 
 
-bucket_2 = "ahmedamsoliman-replica"
+bucket = "ahmedamsoliman"
+uae_region = "me-central-1"
+us_region = "us-east-1"
+
+access_key_parameter_name = "s3-access-key"
+secret_key_parameter_name = "s3-secret-key"
 
 if socket.gethostname() == "AAMSThinkPadX1":
-    session = boto3.Session(profile_name="aams-1-us-east-1")
+    session = boto3.Session(profile_name="aams-s3-me-central-1")
     s3 = session.client("s3")
 else:
-    s3 = boto3.client("s3")
+    ssm_client = boto3.client("ssm")
+    access_key_parameter = ssm_client.get_parameter(Name=access_key_parameter_name, WithDecryption=True)
+    secret_key_parameter = ssm_client.get_parameter(Name=secret_key_parameter_name, WithDecryption=True)
+    access_key = access_key_parameter["Parameter"]["Value"]
+    secret_key = secret_key_parameter["Parameter"]["Value"]
+    session = boto3.Session(
+        aws_access_key_id=access_key,
+        aws_secret_access_key=secret_key,
+        region_name=us_region
+    )
+    s3 = session.client("s3", region_name=uae_region)
 
 
 def get_all_s3_objects(s3, **base_kwargs):
@@ -25,7 +40,7 @@ def get_all_s3_objects(s3, **base_kwargs):
 
 
 def lambda_handler(event, context):
-    fixed = "https://s3.amazonaws.com/ahmedamsoliman-replica/"
+    fixed = "https://ahmedamsoliman.s3.me-central-1.amazonaws.com/"
 
     _000 = []
     _2010 = []
@@ -43,34 +58,34 @@ def lambda_handler(event, context):
     _2024 = []
     _gd = []
     
-    for file in get_all_s3_objects(s3, Bucket=bucket_2, Prefix=f"Fellas/000"):
+    for file in get_all_s3_objects(s3, Bucket=bucket, Prefix=f"Fellas/000"):
         _000.append(fixed + file["Key"])
 
-    for file in get_all_s3_objects(s3, Bucket=bucket_2, Prefix=f"Fellas/2010"):
+    for file in get_all_s3_objects(s3, Bucket=bucket, Prefix=f"Fellas/2010"):
         _2010.append(fixed + file["Key"])
-    for file in get_all_s3_objects(s3, Bucket=bucket_2, Prefix=f"Fellas/2015"):
+    for file in get_all_s3_objects(s3, Bucket=bucket, Prefix=f"Fellas/2015"):
         _2015.append(fixed + file["Key"])
 
-    for file in get_all_s3_objects(s3, Bucket=bucket_2, Prefix=f"Fellas/2016"):
+    for file in get_all_s3_objects(s3, Bucket=bucket, Prefix=f"Fellas/2016"):
         _2016.append(fixed + file["Key"])
-    for file in get_all_s3_objects(s3, Bucket=bucket_2, Prefix=f"Fellas/2017"):
+    for file in get_all_s3_objects(s3, Bucket=bucket, Prefix=f"Fellas/2017"):
         _2017.append(fixed + file["Key"])
-    for file in get_all_s3_objects(s3, Bucket=bucket_2, Prefix=f"Fellas/2018"):
+    for file in get_all_s3_objects(s3, Bucket=bucket, Prefix=f"Fellas/2018"):
         _2018.append(fixed + file["Key"])
-    for file in get_all_s3_objects(s3, Bucket=bucket_2, Prefix=f"Fellas/2019"):
+    for file in get_all_s3_objects(s3, Bucket=bucket, Prefix=f"Fellas/2019"):
         _2019.append(fixed + file["Key"])
 
-    for file in get_all_s3_objects(s3, Bucket=bucket_2, Prefix=f"Fellas/2020"):
+    for file in get_all_s3_objects(s3, Bucket=bucket, Prefix=f"Fellas/2020"):
         _2020.append(fixed + file["Key"])
-    for file in get_all_s3_objects(s3, Bucket=bucket_2, Prefix=f"Fellas/2021"):
+    for file in get_all_s3_objects(s3, Bucket=bucket, Prefix=f"Fellas/2021"):
         _2021.append(fixed + file["Key"])
-    for file in get_all_s3_objects(s3, Bucket=bucket_2, Prefix=f"Fellas/2022"):
+    for file in get_all_s3_objects(s3, Bucket=bucket, Prefix=f"Fellas/2022"):
         _2022.append(fixed + file["Key"])
-    for file in get_all_s3_objects(s3, Bucket=bucket_2, Prefix=f"Fellas/2023"):
+    for file in get_all_s3_objects(s3, Bucket=bucket, Prefix=f"Fellas/2023"):
         _2023.append(fixed + file["Key"])
-    for file in get_all_s3_objects(s3, Bucket=bucket_2, Prefix=f"Fellas/2023"):
+    for file in get_all_s3_objects(s3, Bucket=bucket, Prefix=f"Fellas/2023"):
         _2024.append(fixed + file["Key"])
-    for file in get_all_s3_objects(s3, Bucket=bucket_2, Prefix=f"Fellas/GD"):
+    for file in get_all_s3_objects(s3, Bucket=bucket, Prefix=f"Fellas/GD"):
         _gd.append(fixed + file["Key"])
 
     years = {
