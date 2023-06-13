@@ -102,15 +102,15 @@ router.get("/gallary/screenshots", function (req, res) {
   res.render("gallary/screenshots");
 });
 
-let oautoJSONData = JSON.parse(
-  fs.readFileSync(
-    "public/data/aams-lambda-to-list-urls-oau-1-LambdaFunction-ZdKT4MNaVKYo_response.json",
-    "utf8"
-  )
-);
+// let oautoJSONData = JSON.parse(
+//   fs.readFileSync(
+//     "public/data/aams-lambda-to-list-urls-oau-1-LambdaFunction-ZdKT4MNaVKYo_response.json",
+//     "utf8"
+//   )
+// );
 
-router.get("/gallary/oau", function (req, res) {
-  res.render("oau", { all: oautoJSONData["oau"], y: "_oau" });
-});
+// router.get("/gallary/oau", function (req, res) {
+//   res.render("oau", { all: oautoJSONData["oau"], y: "_oau" });
+// });
 
 module.exports = router;

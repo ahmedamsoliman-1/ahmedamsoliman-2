@@ -28,6 +28,7 @@ var express = require("express"),
   yearsRoutes = require("./routes/years"),
   fellasRoutes = require("./routes/fellas"),
   screenshotsRoutes = require("./routes/screenshots"),
+  oauRoutes = require("./routes/oau"),
   linksRoutes = require("./routes/links"),
   videosRoutes = require("./routes/videos"),
   mangeRoutes = require("./routes/mange"),
@@ -57,6 +58,24 @@ mongoose.connect(process.env.MONGO_URL);
 // });
 // request(screenshots_thumb, function (error, response, body) {
 //   fs.writeFileSync("public/data/screenshots_thumb.json", body);
+// });
+
+// oau_original = process.env.oau_original;
+// oau_thumb = process.env.oau_thumb;
+// request(oau_original, function (error, response, body) {
+//   fs.writeFileSync("public/data/oau_original.json", body);
+// });
+// request(oau_thumb, function (error, response, body) {
+//   fs.writeFileSync("public/data/oau_thumb.json", body);
+// });
+
+// fellas_original = process.env.fellas_original;
+// fellas_thumb = process.env.fellas_thumb;
+// request(fellas_original, function (error, response, body) {
+//   fs.writeFileSync("public/data/fellas_original.json", body);
+// });
+// request(fellas_thumb, function (error, response, body) {
+//   fs.writeFileSync("public/data/fellas_thumb.json", body);
 // });
 
 // dynamodb.connect("mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority");
@@ -103,6 +122,7 @@ app.use(gamesRoutes);
 app.use(weatherRoutes);
 app.use(videosRoutes);
 app.use(screenshotsRoutes);
+app.use(oauRoutes);
 app.use(mangeRoutes);
 app.use(appsRoutes);
 app.use(digitalBadgesRoutes);

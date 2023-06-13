@@ -4,16 +4,16 @@ var fs = require("fs");
 var router = express.Router();
 
 let UrlsOriginal = JSON.parse(
-  fs.readFileSync("public/data/fellas_original.json", "utf8")
+  fs.readFileSync("public/data/oau_original.json", "utf8")
 );
 let UrlsThumbnails = JSON.parse(
-  fs.readFileSync("public/data/fellas_thumb.json", "utf8")
+  fs.readFileSync("public/data/oau_thumb.json", "utf8")
 );
 
 let page = "0ndated";
 
 for (let year in UrlsOriginal) {
-  router.get("/gallary/fellas/" + year.toLowerCase(), function (req, res) {
+  router.get("/gallary/" + year.toLowerCase(), function (req, res) {
     res.render(page, {
       array1: UrlsOriginal[year],
       array2: UrlsThumbnails[year],
