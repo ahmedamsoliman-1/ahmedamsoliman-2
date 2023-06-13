@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Variables
-stack='list-urls-fellas-thumb-lambda-function'
+var='fellas-thumb'
 
 # Const
+stack='list-urls-'$var'-lambda-function'
 profile="r53-us-east-1"
 bucket='us.zipped.ahmedalimsoliman.click'
 template='lambda.yml'
-
 
 source=$stack.py
 destination=$stack.zip
@@ -35,12 +35,13 @@ aws cloudformation deploy \
       S3KeyName=$destination \
       LambdaHandler=$handler \
       S3BucketName=$bucket \
+      LAmbdaFunctionDescription=$var \
     --template-file $template
 
-aws cloudformation wait \
-    stack-create-complete \
-    --profile $profile \
-    --stack-name $stack
+# aws cloudformation wait \
+#     stack-create-complete \
+#     --profile $profile \
+#     --stack-name $stack
 
 # Remove zipped file
 rm $destination

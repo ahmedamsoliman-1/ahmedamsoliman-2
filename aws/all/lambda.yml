@@ -11,6 +11,9 @@ Parameters:
   LambdaHandler:
     Type: String
     Default: xxx
+  LAmbdaFunctionDescription:
+    Type: String
+    Default: xxx
 
 Resources:
   PermissionForURLInvoke:
@@ -72,7 +75,7 @@ Resources:
       Timeout: 500
       Handler: !Ref LambdaHandler
       Role: !GetAtt LambdaFunctionRole.Arn
-      Description: Lambda function returns URLs from S3 Bucket
+      Description: !Ref LAmbdaFunctionDescription
       Code:
         S3Bucket: !Ref S3BucketName
         S3Key: !Ref S3KeyName
