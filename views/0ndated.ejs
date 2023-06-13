@@ -5,7 +5,7 @@
     <div class="container">
       <h1>Weclome To My gallary!</h1>
       <a>my ALL pics throuh <strong><%= y %></strong></a>
-      <div><a>Number of image: <%= all.length %></a></div>
+      <div><a>Number of image: <%= array1.length %></a></div>
     </div>
   </header>
 </div>
@@ -18,32 +18,20 @@
 
 <div class="container">
   <div class="row text-center" style="display: flex; flex-wrap: wrap">
-    <% all.forEach(function(pic) { %>
+    <% for (var i = 0; i < array1.length; i++) { %> <% var item1 = array1[i]; %>
+    <% var item2 = array2[i]; %> <% var fileName =
+    item1.substring(item1.lastIndexOf('/') + 1, item1.lastIndexOf('.')); %>
     <div class="col-md-3 col-sm-6">
       <div class="thumbnail">
-        <img src="<%= pic %>" />
+        <img src="<%= item2 %>" />
         <div class="caption">
-          <h4>
-            <%=
-            pic.split("https://s3.amazonaws.com/ahmedamsoliman-replica/")[1].
-            replace("IAM/Years/","").replace("IAM/Instagram/","").replace("0NDATED/","").
-            replace("2005","").replace("2008","").replace("2010","").replace("2012","").replace("2013","").replace("2014","").
-            replace("2015","").replace("2016","").replace("2017","").replace("2018","").replace("2018","").replace("2019","").
-            replace(".png","").replace("2020","").replace("2021","").replace("2022","").replace("20223","").replace("2024","").
-            replace(".jpg","").replace("/1/", "").replace("/2/",
-            "").replace("/3/","").replace("/4/", "").replace("/5/", "").
-            replace("/6/","").replace("/7/", "").replace("/8/",
-            "").replace("/9/",""). replace("/10/", "").replace("/11/",
-            "").replace("/12/", "").replace("/",
-            "").replace("_","/").replace("_","/").replace("_","/").replace("_","/")
-            %>
-          </h4>
-          <a target="_blank" href="<%= pic %>" class="btn btn-sm btn-info"
+          <h4><%= fileName %></h4>
+          <a target="_blank" href="<%= item1 %>" class="btn btn-sm btn-info"
             >Open</a
           >
         </div>
       </div>
     </div>
-    <% }); %>
+    <% } %>
   </div>
 </div>
