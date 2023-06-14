@@ -4,24 +4,27 @@ var fs = require("fs");
 var router = express.Router();
 var middleware = require("../middleware");
 
-let allToJSONData = JSON.parse(
-  fs.readFileSync(
-    "public/data/aams-lambda-to-list-urls-videos-1-LambdaFunction-FFIK5io32jS9_response.json",
-    "utf8"
-  )
+let UrlsOriginal = JSON.parse(
+  fs.readFileSync("public/data/videos_original.json", "utf8")
+);
+let UrlsThumbnails = JSON.parse(
+  fs.readFileSync("public/data/videos_thumb.json", "utf8")
 );
 
-let _ejs_page_vid = "videos";
+let page = "0ndated";
 
-let _videos = allToJSONData["video"];
-
-router.get(
-  "/gallary/videos",
-  middleware.isLoggedInAsAdmin,
-  function (req, res) {
-    // res.send(_videos);
-    res.render(_ejs_page_vid, { all: _videos, y: Object.keys({ _videos })[0] });
-  }
-);
+for (let year in UrlsOriginal) {
+  router.get(
+    "/gallary/videos",
+    middleware.isLoggedInAsAdmin,
+    function (req, res) {
+      res.render(page, {
+        array1: UrlsOriginal[year],
+        array2: UrlsThumbnails[year],
+        y: year,
+      });
+    }
+  );
+}
 
 module.exports = router;

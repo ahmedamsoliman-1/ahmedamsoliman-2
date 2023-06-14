@@ -13,6 +13,9 @@ Invoke URL: https://akj6r2av3xhdjalr5dcha65qfy0tclsb.lambda-url.us-east-1.on.aws
 Function Name: list-urls-videos-lambda-function-LambdaFunction-uFDOIoS6GKbU
 Invoke URL: https://6tyl2fqtfume5ofjdemhj6v4xy0ygcnx.lambda-url.us-east-1.on.aws/
 
+Function Name: list-urls-videos-thumb-lambda-funct-LambdaFunction-B6tLcZ6WmaPb
+Invoke URL: https://wzyjjqvmx2qekx7ua2pbojarqu0npffx.lambda-url.us-east-1.on.aws/
+
 Function Name: list-urls-fellas-thumb-lambda-funct-LambdaFunction-sOzgRxwShWcv
 Invoke URL: https://6hevdqwdrjuyoz7molygj7v75m0bopsg.lambda-url.us-east-1.on.aws/
 

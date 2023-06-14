@@ -84,6 +84,25 @@ mongoose.connect(process.env.MONGO_URL);
 //   fs.writeFileSync("public/data/instagram.json", body);
 // });
 
+// videos_original = process.env.videos_original;
+// request(videos_original, function (error, response, body) {
+//   fs.writeFileSync("public/data/videos_original.json", body);
+// });
+
+// videos_thumb = process.env.videos_thumb;
+// request(videos_thumb, function (error, response, body) {
+//   fs.writeFileSync("public/data/videos_thumb.json", body);
+// });
+
+// certs_original = process.env.certs_original;
+// request(certs_original, function (error, response, body) {
+//   fs.writeFileSync("public/data/certs_original.json", body);
+// });
+// certs_thumb = process.env.certs_thumb;
+// request(certs_thumb, function (error, response, body) {
+//   fs.writeFileSync("public/data/certs_thumb.json", body);
+// });
+
 // dynamodb.connect("mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
