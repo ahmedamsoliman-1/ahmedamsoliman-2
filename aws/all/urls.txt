@@ -13,11 +13,17 @@ Invoke URL: https://6tyl2fqtfume5ofjdemhj6v4xy0ygcnx.lambda-url.us-east-1.on.aws
 Function Name: list-urls-fellas-thumb-lambda-funct-LambdaFunction-sOzgRxwShWcv
 Invoke URL: https://6hevdqwdrjuyoz7molygj7v75m0bopsg.lambda-url.us-east-1.on.aws/
 
+Function Name: list-urls-certs-thumb-lambda-functi-LambdaFunction-Oqj1aub4ywKg
+Invoke URL: https://gf2y4ponw5mqhjl4upgr73hwpa0ffysn.lambda-url.us-east-1.on.aws/
+
 Function Name: list-urls-fellas-original-lambda-fu-LambdaFunction-WA0Oz0g63olc
 Invoke URL: https://5x4xxwfz4d2oye7uis5xsmgac40cpvai.lambda-url.us-east-1.on.aws/
 
 Function Name: list-urls-screenshots-original-lamb-LambdaFunction-LWJogZnzhMX1
 Invoke URL: https://hfhadoe4fue5qidqzul6kqlqzi0smbuw.lambda-url.us-east-1.on.aws/
+
+Function Name: list-urls-certs-original-lambda-fun-LambdaFunction-PsUhenMRCZZl
+Invoke URL: https://ktldqcnw2a5zkiqdup44s66jbq0zagqi.lambda-url.us-east-1.on.aws/
 
 Function Name: list-urls-oau-thumb-lambda-function-LambdaFunction-7qKSOOZGYk1J
 Invoke URL: https://wqipuksa6aemoklx3ocktfimz40fgpaq.lambda-url.us-east-1.on.aws/
