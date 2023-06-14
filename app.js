@@ -29,6 +29,7 @@ var express = require("express"),
   fellasRoutes = require("./routes/fellas"),
   screenshotsRoutes = require("./routes/screenshots"),
   oauRoutes = require("./routes/oau"),
+  instagramRoutes = require("./routes/instagram"),
   linksRoutes = require("./routes/links"),
   videosRoutes = require("./routes/videos"),
   mangeRoutes = require("./routes/mange"),
@@ -78,6 +79,11 @@ mongoose.connect(process.env.MONGO_URL);
 //   fs.writeFileSync("public/data/fellas_thumb.json", body);
 // });
 
+// instagram = process.env.instagram;
+// request(instagram, function (error, response, body) {
+//   fs.writeFileSync("public/data/instagram.json", body);
+// });
+
 // dynamodb.connect("mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
@@ -123,6 +129,7 @@ app.use(weatherRoutes);
 app.use(videosRoutes);
 app.use(screenshotsRoutes);
 app.use(oauRoutes);
+app.use(instagramRoutes);
 app.use(mangeRoutes);
 app.use(appsRoutes);
 app.use(digitalBadgesRoutes);

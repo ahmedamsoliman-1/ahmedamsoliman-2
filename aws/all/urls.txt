@@ -4,6 +4,9 @@ Invoke URL: https://ekqsfn5afkaawq32bpefikwy5a0lkewo.lambda-url.us-east-1.on.aws
 Function Name: list-urls-oau-original-lambda-funct-LambdaFunction-03nRyYbygw1L
 Invoke URL: https://kd4vpvrrtieg4wn6ru2yszraue0ozebi.lambda-url.us-east-1.on.aws/
 
+Function Name: list-urls-instagram-lambda-function-LambdaFunction-UCSI1jsDMlqw
+Invoke URL: https://h6n5trfwjqcg4qfipwwdzdlrau0rzvzr.lambda-url.us-east-1.on.aws/
+
 Function Name: list-urls-screenshots-thumb-lambda--LambdaFunction-e8zxm0jG4w61
 Invoke URL: https://akj6r2av3xhdjalr5dcha65qfy0tclsb.lambda-url.us-east-1.on.aws/
 
