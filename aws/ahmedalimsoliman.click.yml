@@ -4,13 +4,13 @@ Description: Build ahmedalimsoliman NodeJS app and 2 ec2 and place it in custom 
 Parameters:
   ImageIdName:
     Type: String
-    Default: ami-022e1a32d3f742bd8
+    Default: xxx 
   KeyNameName:
     Type: String
-    Default: aams-1
+    Default: xxx
   InstanceTypeName:
     Type: String
-    Default: "t2.micro"
+    Default: xxx 
 
 Resources:
   AhmecCustomVPC1:
