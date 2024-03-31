@@ -19,7 +19,7 @@ var express = require("express"),
   // Picture = require("./models/picture"),
   // Comment = require("./models/comment"),
 
-  port = process.env.PORT || 80,
+  port = process.env.APP_PORT,
   ipAddress = require("ip").address(),
   hostName = require("os").hostname(),
   weatherData = require("./utils/weatherData"),
@@ -43,67 +43,6 @@ var express = require("express"),
 
 mongoose.connect(process.env.MONGO_URL);
 
-// iam_original = process.env.iam_original;
-// iam_thumb = process.env.iam_thumb;
-// request(iam_original, function (error, response, body) {
-//   fs.writeFileSync("public/data/iam_original.json", body);
-// });
-// request(iam_thumb, function (error, response, body) {
-//   fs.writeFileSync("public/data/iam_thumb.json", body);
-// });
-
-// screenshots_original = process.env.screenshots_original;
-// screenshots_thumb = process.env.screenshots_thumb;
-// request(screenshots_original, function (error, response, body) {
-//   fs.writeFileSync("public/data/screenshots_original.json", body);
-// });
-// request(screenshots_thumb, function (error, response, body) {
-//   fs.writeFileSync("public/data/screenshots_thumb.json", body);
-// });
-
-// oau_original = process.env.oau_original;
-// oau_thumb = process.env.oau_thumb;
-// request(oau_original, function (error, response, body) {
-//   fs.writeFileSync("public/data/oau_original.json", body);
-// });
-// request(oau_thumb, function (error, response, body) {
-//   fs.writeFileSync("public/data/oau_thumb.json", body);
-// });
-
-// fellas_original = process.env.fellas_original;
-// fellas_thumb = process.env.fellas_thumb;
-// request(fellas_original, function (error, response, body) {
-//   fs.writeFileSync("public/data/fellas_original.json", body);
-// });
-// request(fellas_thumb, function (error, response, body) {
-//   fs.writeFileSync("public/data/fellas_thumb.json", body);
-// });
-
-// instagram = process.env.instagram;
-// request(instagram, function (error, response, body) {
-//   fs.writeFileSync("public/data/instagram.json", body);
-// });
-
-// videos_original = process.env.videos_original;
-// request(videos_original, function (error, response, body) {
-//   fs.writeFileSync("public/data/videos_original.json", body);
-// });
-
-// videos_thumb = process.env.videos_thumb;
-// request(videos_thumb, function (error, response, body) {
-//   fs.writeFileSync("public/data/videos_thumb.json", body);
-// });
-
-// certs_original = process.env.certs_original;
-// request(certs_original, function (error, response, body) {
-//   fs.writeFileSync("public/data/certs_original.json", body);
-// });
-// certs_thumb = process.env.certs_thumb;
-// request(certs_thumb, function (error, response, body) {
-//   fs.writeFileSync("public/data/certs_thumb.json", body);
-// });
-
-// dynamodb.connect("mongodb+srv://ahmed:123@cluster0.7ocrq.mongodb.net/yelp?retryWrites=true&w=majority");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
