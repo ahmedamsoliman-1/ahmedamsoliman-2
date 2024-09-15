@@ -29,6 +29,7 @@ jobs:
           "https://aams-cvviewer-resume-dataeng.onrender.com"
           "https://aams-cvviewer-resume-ts.onrender.com"
           "https://aams-glinktree.onrender.com"
+          "https://aams-xxx.onrender.com"
         )
         for website in "${websites[@]}"; do
           echo "Pinging $website"
